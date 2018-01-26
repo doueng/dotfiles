@@ -1,0 +1,28 @@
+[
+	{
+		"key": "cmd+j",
+		"command": "workbench.action.terminal.focus",
+		"when": "!terminalFocus"
+	},
+	{
+		"key": "cmd+l",
+		"command": "settings.cycle.line_numbers",
+		"when": "editorTextFocus",
+		"args": {
+			"id": "line_numbers",
+			"overrideWorkspaceSettings": true,
+			"values": [
+				{"editor.lineNumbers": "on"},
+				{"editor.lineNumbers": "off"}
+			]
+		}
+	},
+	{
+		"key": "cmd+b",
+		"command": "macros.toggleSideBars"
+	},
+	{
+		"key": "cmd+d",
+		"command": "macros.deletePane"
+	}
+]
