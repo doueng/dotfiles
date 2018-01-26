@@ -24,5 +24,9 @@
 	{
 		"key": "cmd+d",
 		"command": "macros.deletePane"
+	},
+	{
+		"key": "cmd+f",
+		"command": "workbench.action.openNextRecentlyUsedEditorInGroup"
 	}
 ]
