@@ -22,9 +22,10 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 #export LS_COLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 # vim 
-alias vi=vim
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/vim
+alias vi=nvim
+alias vim=nvim
+export EDITOR=nvim
+export VISUAL=nvim
 
 
 # dotfiles
@@ -68,10 +69,18 @@ alias foldersize="du -dh"
 # python
 alias new_env="python3 -m venv"
 
+# android
+alias adb="/Users/Admin/Downloads/platform-tools/adb"
+alias androidDownloadFolder="/storage/emulated/0/download"
+
+# random number
+# seq 20 | gshuf
+
 # Anaconda
 #export PATH="/Users/Admin/anaconda2/bin:$PATH"
 # conda
 # source activate interview
 # source deactivate
 
+export PATH="/usr/local/opt/texinfo/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

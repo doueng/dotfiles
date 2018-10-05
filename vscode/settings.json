@@ -1,55 +1,117 @@
 {
-	"telemetry.enableTelemetry": false,
-	"telemetry.enableCrashReporter": false,
-	"editor.cursorBlinking": "solid",
-	"editor.renderWhitespace": "boundary",
-	"workbench.editor.enablePreviewFromQuickOpen": false,
-	"workbench.editor.enablePreview": false,
-	"vim.easymotion": false,
-	"C_Cpp.intelliSenseEngine": "Default",
-	"window.zoomLevel": 0,
-	"editor.detectIndentation": true,
-	"emmet.showAbbreviationSuggestions": false,
-	"editor.quickSuggestions": {
-		"other": false,
-		"comments": false,
-		"strings": false
-	},
-	"editor.suggestOnTriggerCharacters": false,
-	"editor.wordBasedSuggestions": false,
-	"workbench.statusBar.visible": false,
-	"editor.rulers": [80],
-	"zenMode.fullScreen": false,
-	"workbench.editor.showTabs": false,
-	"editor.minimap.enabled": false,
-	"editor.codeLens": false,
-	"workbench.activityBar.visible": false,
-	"explorer.openEditors.visible": 0,
-	"vscode_custom_css.imports": [
-		"file:///Users/Admin/.vscode/hide-title-bar.css"
-	],
-	"window.title": "${activeuditorMedium}${separator}${rootName} ${dirty}",
-	"workbench.startupEditor": "newUntitledFile",
-	"settings.cycle.warnOnWorkspaceSettingsCollisions": true,
-	"settings.cycle": [
-		{
-			"id": "line_numbers",
-			"values": [
-				{"editor.lineNumbers": "on"},
-				{"editor.lineNumbers": "off"}
-			]
-		}
-	],
-	"editor.lineNumbers": "off",
-	"macros": {
-		"toggleSideBars": [
-			"workbench.action.toggleSidebarVisibility",
-			"workbench.action.toggleActivityBarVisibility"
-		],
-		"deletePane": [
-			"workbench.action.closeEditorsToTheLeft",
-			"workbench.action.closeEditorsToTheRight",
-			"workbench.action.closeActiveEditor"
-		]
-	}
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "editor.cursorBlinking": "solid",
+  "editor.renderWhitespace": "boundary",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.enablePreview": false,
+  "vim.easymotion": false,
+  "C_Cpp.intelliSenseEngine": "Default",
+  "window.zoomLevel": 1,
+  "emmet.showAbbreviationSuggestions": false,
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.wordBasedSuggestions": false,
+  // "workbench.statusBar.visible": false,
+  "editor.rulers": [
+    80
+  ],
+  "zenMode.fullScreen": false,
+  "workbench.editor.showTabs": false,
+  "editor.minimap.enabled": false,
+  "editor.codeLens": false,
+  "workbench.activityBar.visible": false,
+  "explorer.openEditors.visible": 0,
+  "vscode_custom_css.imports": [
+    "file:///Users/Admin/.vscode/hide-title-bar.css"
+  ],
+  "window.title": "${activeuditorMedium}${separator}${rootName} ${dirty}",
+  "workbench.startupEditor": "newUntitledFile",
+  "settings.cycle.warnOnWorkspaceSettingsCollisions": true,
+  "settings.cycle": [
+    {
+      "id": "line_numbers",
+      "values": [
+        {
+          "editor.lineNumbers": "on"
+        },
+        {
+          "editor.lineNumbers": "off"
+        }
+      ]
+    }
+  ],
+  "editor.lineNumbers": "on",
+  "macros": {
+    "toggleSideBarStartup": [
+      "workbench.action.toggleSidebarVisibility",
+    ],
+    "toggleSideBars": [
+      "workbench.action.toggleSidebarVisibility",
+      "workbench.action.toggleActivityBarVisibility"
+    ],
+    "deletePane": [
+      "workbench.action.closeEditorsToTheLeft",
+      "workbench.action.closeEditorsToTheRight",
+      "workbench.action.closeActiveEditor"
+    ]
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+  },
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "vim.statusBarColorControl": true,
+  "vim.useSystemClipboard": true,
+  "vim.enableNeovim": true,
+  "vim.leader": ",",
+  "vim.sneak": true,
+  "sync.gist": "4383ac291132271eaaf5f627a4d6fb36",
+  "sync.host": "",
+  "sync.pathPrefix": "",
+  "sync.quietSync": false,
+  "sync.askGistName": false,
+  "sync.removeExtensions": true,
+  "sync.syncExtensions": true,
+  "sync.autoDownload": false,
+  "sync.autoUpload": false,
+  "sync.lastUpload": "2018-06-21T13:49:19.161Z",
+  "sync.lastDownload": "",
+  "sync.forceDownload": false,
+  "javascript.format.enable": false,
+  "beautify.language": {
+    "js": [],
+    "css": [
+      "css",
+      "scss"
+    ],
+    "html": [
+      "htm",
+      "html"
+    ]
+  },
+  "beautify.ignore": [
+    "/Users/douglas.engstrand/assistant/lab-ghome-nike/*"
+  ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "eslint.autoFixOnSave": true,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f"
+  },
+  "editor.hover.enabled": false,
+  "editor.hover.delay": 3000,
 }
