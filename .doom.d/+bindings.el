@@ -7,8 +7,8 @@
 (setq expand-region-contract-fast-key "V")
 
 ;;
-(map! [remap evil-jump-to-tag] #'projectile-find-tag
-      [remap find-tag]         #'projectile-find-tag
+(map! [remap evil-jump-to-tag]	#'projectile-find-tag
+      [remap find-tag]		#'projectile-find-tag
 
       ;; Ensure there are no conflicts
       :nmvo doom-leader-key nil
@@ -21,12 +21,16 @@
       ;; --- Global keybindings ---------------------------
       ;;
       ;; My keybindings
-      :n "M-9" #'other-window
+	  :gnvime "M-j" #'my/eval-lisp
+      :gnvime "M-[" #'other-window
       [remap evil-snipe-s] #'avy-goto-char-2
-      [remap evil-snipe-S] #'avy-pop-mark
+      [remap evil-snipe-S] #'pop-global-mark
       :ni "A-j" #'join-line-down
-      :i "M-e" #'company-search-candidates
+      :i "A-e" #'company-search-candidates
       :gnvime "M-i" #'mode-line-other-buffer
+      :gnvime "M-;" #'my/add-semi-colon
+      :gnvime "M-k" #'kill-this-buffer
+      :gnvime "M-/" #'evil-commentary-line
 
       ;; Lisp editing in emacs state
       :n "," #'evil-emacs-state
@@ -38,7 +42,7 @@
       :gnvime "A-x" #'execute-extended-command
 
       ;; A little sandbox to run code in
-      :gnvime "M-;" #'eval-expression
+      ;; :gnvime "M-;" #'eval-expression
 
       ;; Text-scaling
       :n "M-+"   (λ! (text-scale-set 0))
@@ -78,7 +82,7 @@
         :n "M-f" #'swiper-helm)
       (:when (featurep! :completion ivy)
         :n "M-f" #'swiper)
-      :n  "M-s"   #'save-buffer
+      :ni  "M-s"   #'my/save-buffer
       :m  "A-j"   #'+default:multi-next-line
       :m  "A-k"   #'+default:multi-previous-line
       :nv "C-SPC" #'+evil:fold-toggle
@@ -95,8 +99,8 @@
       :n  "ZX" #'bury-buffer
       :m  "]a" #'evil-forward-arg
       :m  "[a" #'evil-backward-arg
-      :n  "M-k" #'next-buffer
-      :n  "M-j" #'previous-buffer
+      ;; :n  "M-k" #'next-buffer
+      ;; :n  "M-j" #'previous-buffer
       :m  "]o" #'outline-next-visible-heading
       :m  "[o" #'outline-previous-visible-heading
       :n  "]w" #'+workspace/switch-right

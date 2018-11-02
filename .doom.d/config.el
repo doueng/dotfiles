@@ -30,13 +30,56 @@
 
 ;highlight-symbol; Larger font
 
+;; go to end of line, add semi-colon, escape to normal mode
+(defun my/add-semi-colon ()
+  (interactive
+   (progn
+     (end-of-line)
+     (insert ";")
+     (evil-escape))))
+
 ;; switch to scratch buffer
 (defun my/switch-to-scratch ()
   (interactive)
   (switch-to-buffer "*scratch*"))
 
-;; Popup switching
+;; boundp check minor mode
 
+
+;; save buffer and check for errors
+(defun my/save-buffer ()
+  (interactive)
+  (save-some-buffers 'no-prompt))
+
+;; c-mode
+(setq-default c-basic-offset 4
+              indent-tabs-mode t
+              tab-width 4)
+
+;; lookup
+(set! :lookup 'c-mode
+  :definition #'evil-goto-definition)
+
+;; Cider
+(setq cider-auto-jump-to-error nil)
+
+;; eval lisp
+(defun local/eval-clojure ()
+  (my/save-buffer)
+  (cider-load-buffer)
+  (cider-eval-defun-at-point))
+
+(defun local/eval-elisp ()
+  (my/save-buffer)
+  (+eval:region))
+
+(defun my/eval-lisp ()
+  (interactive)
+  (cond
+   ((equal major-mode 'clojure-mode)
+	(local/eval-clojure))
+   ((equal major-mode 'emacs-lisp-mode)
+	(local/eval-elisp))))
 
 ;; Flycheck
 (setq flycheck-check-syntax-automatically '(save))
@@ -44,7 +87,10 @@
 (remove-hook 'evil-insert-state-exit-hook #'+syntax-checkers|flycheck-buffer)
 
 ;; Whitespace
-(add-hook 'before-save-hook #'cleanup-whitespace)
+;; (add-hook 'before-save-hook #'cleanup-whitespace)
+
+;; Open .o files in hexl-mode
+(add-to-list 'auto-mode-alist '("\\.o\\'" . hexl-mode))
 
 ;; Join line
 (defun join-line-down ()

@@ -9,6 +9,12 @@ export KEYTIMEOUT=1
 #. /usr/local/etc/profile.d/z.sh
 # . ~/z/z.sh
 
+# for pasting shell commands
+alias "$"=""
+
+# change language to english
+export LANG="en_US.UTF-8"
+
 # curl
 alias curlo="curl -O"
 
@@ -109,20 +115,6 @@ function mkdcd () {
 	mkdir $1 && cd $1
 }
 
-# Anaconda
-# export PATH="/Users/douglas.engstrand/anaconda3/bin:$PATH"
-. /Users/douglas.engstrand/anaconda3/etc/profile.d/conda.sh
-# conda
-# source activate interview
-# source deactivate
+export MAIL=dengstra@student.42.fr
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/douglas.engstrand/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/douglas.engstrand/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/douglas.engstrand/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/douglas.engstrand/google-cloud-sdk/completion.zsh.inc'; fi
-
-
-. /Users/douglas.engstrand/torch/install/bin/torch-activate

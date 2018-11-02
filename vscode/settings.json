@@ -24,7 +24,7 @@
   "workbench.editor.showTabs": false,
   "editor.minimap.enabled": false,
   "editor.codeLens": false,
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.visible": true,
   "explorer.openEditors.visible": 0,
   "vscode_custom_css.imports": [
     "file:///Users/Admin/.vscode/hide-title-bar.css"
