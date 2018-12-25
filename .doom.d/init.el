@@ -5,7 +5,7 @@
       ;debugger          ; FIXME stepping through code, to help you add bugs
        eval              ; run code, run (also, repls)
        (evil +everywhere); come to the dark side, we have cookies
-       file-templates    ; auto-snippets for empty files
+       ;file-templates    ; auto-snippets for empty files
        (lookup           ; helps you navigate your code and documentation
         +docsets)        ; ...or in Dash docsets locally
        snippets          ; my elves. They type so I don't have to
@@ -50,7 +50,7 @@
        :editor
        (format +onsave)  ; automated prettiness
        multiple-cursors  ; editing in many places at once
-       parinfer          ; turn lisp into python, sort of
+       ;; parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
 
        :emacs
@@ -68,7 +68,7 @@
       ;docker
        editorconfig      ; let someone else argue about tabs vs spaces
       ;ein               ; tame Jupyter notebooks with emacs
-      ;gist              ; interacting with github gists
+      gist              ; interacting with github gists
       macos             ; MacOS-specific commands
       make              ; run make tasks from Emacs
       magit             ; a git porcelain for Emacs
@@ -77,11 +77,11 @@
       ;prodigy           ; FIXME managing external services & code builders
       ;rgb               ; creating color strings
       ;tmux              ; an API for interacting with tmux
-      ;upload            ; map local to remote projects via ssh/ftp
+      upload            ; map local to remote projects via ssh/ftp
       ;wakatime
 
        :lang
-      ;assembly          ; assembly for fun or debugging
+      assembly          ; assembly for fun or debugging
       (cc +irony +rtags); C/C++/Obj-C madness
       clojure           ; java with a lisp
       ;common-lisp       ; if you've seen one lisp, you've seen them all
@@ -107,7 +107,7 @@
        markdown          ; writing docs for people to ignore
       ;nim               ; python + lisp at the speed of c
       ;nix               ; I hereby declare "nix geht mehr!"
-      ;ocaml             ; an objective camel
+      ocaml             ; an objective camel
        (org              ; organize your plain life in plain text
         +attach          ; custom attachment system
         +babel           ; running code in org

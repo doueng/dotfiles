@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: ifn1
+# key: in1
+# --
+if (-1 == ${})
+   return (-1);

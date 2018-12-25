@@ -2,4 +2,4 @@
 # name: ft_printf
 # key: p
 # --
-ft_printf("${1:format}", ${2});
+ft_printf("${1:%d}\n", ${});

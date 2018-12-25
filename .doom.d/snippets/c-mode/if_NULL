@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: if_NULL
+# key: in
+# --
+if (!(${}))
+   return (NULL);
