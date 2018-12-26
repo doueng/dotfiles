@@ -119,7 +119,9 @@
 ;; (defvaralias 'c-basic-offset 'tab-width)
 
 ;; Open .o files in hexl-mode
-(add-to-list 'auto-mode-alist '("\\.o\\'" . hexl-mode))
+(add-to-list 'auto-mode-alist
+			 '("\\.zsh\\" . sh-mode)
+			 ("\\.o\\'" . hexl-mode))
 
 (defun yas/org-very-safe-expand ()
   (let ((yas/fallback-behavior 'return-nil)) (yas/expand)))
