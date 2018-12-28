@@ -14,7 +14,9 @@ alias week="date +%V"
 # ls
 alias ls="ls -G"
 alias la="ls -a"
-alias ll="ls -lhG"
+alias ll="ls -lh"
+alias lla="ll -a"
+
 
 # vim
 alias vi=nvim
@@ -22,6 +24,7 @@ alias vi=nvim
 # dotfiles
 alias zrc="vi ~/.zshrc"
 alias vrc="vi ~/.config/nvim/init.vim"
+
 # colordiff
 alias diff="colordiff"
 
@@ -92,3 +95,5 @@ alias "$"=""
 # ocaml
 eval $(opam env)
 alias oc=ocamlopt
+
+alias updateantibody="antibody bundle < $ZSH_FOLDER/antibody_plugins.txt > $ZSH_FOLDER/antibody_plugins.sh"

@@ -9,5 +9,4 @@ setopt INC_APPEND_HISTORY
 setopt AUTO_CD
 setopt AUTO_LIST
 setopt AUTO_MENU
-setopt ALWAYS_TO_END       # Move cursor to the end of a completed word.
-
+setopt ALWAYS_TO_END

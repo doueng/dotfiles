@@ -31,7 +31,8 @@
 (setq +workspaces-on-switch-project-behavior t)
 
 ;; no auto comment on new line
-;; (advice-remove 'doom*newline-indent-and-continue-comments)
+;; (advice-remove 'doom*newline-indent-and-continue-comments);
+(advice-remove #'newline-and-indent 'doom*newline-indent-and-continue-comments)
 ;; (advice-remove 'newline-and-indent #'doom*newline-and-indent)
 ;; (advice-remove 'evil-insert-newline-below #'+evil*insert-newline-below-and-respect-comments)
 
@@ -118,10 +119,9 @@
 
 ;; (defvaralias 'c-basic-offset 'tab-width)
 
-;; Open .o files in hexl-mode
-(add-to-list 'auto-mode-alist
-			 '("\\.zsh\\" . sh-mode)
-			 ("\\.o\\'" . hexl-mode))
+;; Open files in mode based on file ending
+(add-to-list 'auto-mode-alist '("\\.zsh\\" . sh-mode))
+(add-to-list 'auto-mode-alist '("\\.o\\'" . hexl-mode))
 
 (defun yas/org-very-safe-expand ()
   (let ((yas/fallback-behavior 'return-nil)) (yas/expand)))

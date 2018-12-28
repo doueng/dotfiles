@@ -4,6 +4,8 @@ brewbump() {
   brew update
   echo -e "\\nUpgrading Homebrew...\\n"
   brew upgrade
+  echo -e "\\nBrew cask upgrade\\n"
+  brew cask upgrade
   echo -e "\\nCleaning your mess...\\n"
   brew cleanup
   brew prune
@@ -18,8 +20,6 @@ nuke_node_modules() {
   find . -name node_modules -type d -prune -exec rm -rf '{}' +
 }
 
-# Usage: extract <file>
-# Description: extracts archived files / mounts disk images
 extract() {
   if [ -f "$1" ]; then
 	case "$1" in
@@ -43,11 +43,13 @@ extract() {
   fi
 }
 
-# header
-function h () {
-	cat $(fd $1 /usr/include) | less
-}
-# mkdir
 function mkdcd () {
 	mkdir $1 && cd $1
+}
+
+function speedtestzsh () {
+	for i in $(seq 1 10)
+	do
+		/usr/bin/time zsh -i -c exit
+	done
 }
