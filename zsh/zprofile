@@ -1,4 +1,7 @@
 
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # add rtags path
 export PATH="$PATH:/Users/Admin/.emacs.d/.local/etc/rtags/rtags-2.20/bin"
 
@@ -26,4 +29,7 @@ export MANWIDTH=60
 export LESS='-S -R'
 
 # homebrew
-HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+# remove path duplicates
+typeset -aU path
