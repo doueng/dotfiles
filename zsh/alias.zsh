@@ -84,7 +84,7 @@ alias curlo="curl -O"
 alias tree='tree -I node_modules'
 
 # emacs
-alias emacs="o -a emacs $1"
+#alias emacs="o -a emacs $1"
 
 # make
 alias make="bear gmake"

@@ -53,3 +53,9 @@ function speedtestzsh () {
 		/usr/bin/time zsh -i -c exit
 	done
 }
+
+# restart shell
+functions rz () {
+    exec $SHELL
+    source ~/.zprofile
+}

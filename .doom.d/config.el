@@ -102,7 +102,7 @@
 	(local/eval-elisp))))
 
 ;; Flycheck
-(setq flycheck-check-syntax-automatically '(nil))
+(setq flycheck-check-syntax-automatically nil)
 (remove-hook 'doom-escape-hook #'+syntax-checkers|flycheck-buffer)
 (remove-hook 'evil-insert-state-exit-hook #'+syntax-checkers|flycheck-buffer)
 
@@ -120,7 +120,7 @@
 ;; (defvaralias 'c-basic-offset 'tab-width)
 
 ;; Open files in mode based on file ending
-(add-to-list 'auto-mode-alist '("\\.zsh\\" . sh-mode))
+(add-to-list 'auto-mode-alist '("\\.zsh\\'" . sh-mode))
 (add-to-list 'auto-mode-alist '("\\.o\\'" . hexl-mode))
 
 (defun yas/org-very-safe-expand ()
@@ -134,7 +134,12 @@
 			(define-key yas/keymap [tab] 'yas/next-field)))
 
 ;; Start emacs in full-screen mode
-(add-hook 'window-setup-hook 'toggle-frame-maximized t)
+;; (add-hook 'window-setup-hook 'toggle-frame-maximized t)
+
+;; frames only
+(setq inhibit-splash-screen t)
+(setq inhibit-startup-message t)
+(setq inhibit-startup-screen t)
 
 ;; Load keybindings file
 (load! "+bindings")

@@ -31,5 +31,15 @@ export LESS='-S -R'
 # homebrew
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+# llvm
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+
+# gcc
+export PATH="/usr/local/Cellar/gcc/8.2.0/bin:$PATH"
+
+
 # remove path duplicates
 typeset -aU path

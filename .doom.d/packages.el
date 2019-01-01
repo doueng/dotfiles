@@ -13,3 +13,5 @@
 
 ;; disable ivy-rich since it is very slow
 (package! ivy-rich :disable t)
+
+(package! frames-only-mode)
