@@ -17,7 +17,6 @@ alias la="ls -a"
 alias ll="ls -lh"
 alias lla="ll -a"
 
-
 # vim
 alias vi=nvim
 
@@ -81,10 +80,11 @@ alias v='f -e nvim'      # quick opening files with neovim
 alias curlo="curl -O"
 
 # tree
-alias tree='tree -I node_modules'
+alias tree="tree -I node_modules"
 
 # emacs
-#alias emacs="o -a emacs $1"
+alias e="emacsclient -c -n $1"
+alias ee="emacsclient -e $1"
 
 # make
 alias make="bear gmake"

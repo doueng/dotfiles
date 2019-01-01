@@ -20,6 +20,10 @@ nuke_node_modules() {
   find . -name node_modules -type d -prune -exec rm -rf '{}' +
 }
 
+compress() {
+    tar -czvf $1.tar.gz $1
+}
+
 extract() {
   if [ -f "$1" ]; then
 	case "$1" in

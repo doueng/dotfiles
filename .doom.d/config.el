@@ -42,31 +42,39 @@
 ;; parinfer
 (setq parinfer-extensions '(defaults pretty-parens evil))
 
-;; No scratch message
-(setq initial-scratch-message nil)
-
 ;; No line numbers
 (setq display-line-numbers-type nil)
 
 ;; Smooth scrolling
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control) . nil)))
+(setq scroll-step            1
+	  scroll-conservatively  10000
+	  mouse-wheel-scroll-amount '(1 ((shift) . 1))
+	  mouse-wheel-progressive-speed nil
+	  mouse-wheel-follow-mouse 't)
 
 ;; Eldoc
 ;; Never resize mode-line
 (setq eldoc-echo-area-use-multiline-p nil)
 
-;; go to end of line, add semi-colon, escape to normal mode
 (defun my/add-semi-colon ()
+  "Go to end of line, add semi-colon, escape to normal mode"
   (interactive
    (progn
 	 (end-of-line)
 	 (insert ";")
 	 (evil-escape))))
 
-;; save buffer and check for errors
-(defun my/save-buffer ()
+(defun my/clean-buffer ()
+  "Cleans the buffer by re-indenting, removing tabs and trailing whitespace."
   (interactive)
-  (whitespace-cleanup)
+  (delete-trailing-whitespace)
+  (save-excursion
+	(replace-regexp "^\n\\{3,\\}" "\n" nil (point-min) (point-max))))
+
+(defun my/save-buffer ()
+  "clean whitespace, save all buffers and then flycheck"
+  (interactive)
+  (my/clean-buffer)
   (save-some-buffers 'no-prompt)
   (when flycheck-mode
 	(flycheck-buffer)))
@@ -106,9 +114,6 @@
 (remove-hook 'doom-escape-hook #'+syntax-checkers|flycheck-buffer)
 (remove-hook 'evil-insert-state-exit-hook #'+syntax-checkers|flycheck-buffer)
 
-;; Electric quote
-(setq electric-quote-comment nil)
-
 ;; Whitespace
 ;; C-c C-o to set offset (c-set-offset)
 (setq tab-width 4)
@@ -133,13 +138,11 @@
 			(add-to-list 'org-tab-first-hook 'yas/org-very-safe-expand)
 			(define-key yas/keymap [tab] 'yas/next-field)))
 
-;; Start emacs in full-screen mode
-;; (add-hook 'window-setup-hook 'toggle-frame-maximized t)
-
-;; frames only
+;; no startup screen
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
 (setq inhibit-startup-screen t)
+(setq initial-scratch-message nil)
 
 ;; Load keybindings file
 (load! "+bindings")
