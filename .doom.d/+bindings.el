@@ -17,5 +17,6 @@
 	:gnvime "M-/" #'evil-commentary-line
 	:gnvime "M-i" #'evil-switch-to-windows-last-buffer
 	:gnvime "M-v" #'clipboard-yank
+	:gnvime nil #'doom/delete-frame
 	:gnvime "M-w" #'delete-frame
 	))

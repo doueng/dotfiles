@@ -28,12 +28,12 @@
 	  ;deft              ; notational velocity for Emacs
 	   doom              ; what makes DOOM look the way it does
 	   ;;doom-dashboard    ; a nifty splash screen for Emacs
-	   doom-modeline     ; a snazzy Atom-inspired mode-line
+	   ;doom-modeline     ; a snazzy Atom-inspired mode-line
 	   ;;doom-quit         ; DOOM quit-message prompts when you quit Emacs
 	  ;evil-goggles      ; display visual hints when editing in evil
 	  ;fci               ; a `fill-column' indicator
 	   hl-todo           ; highlight TODO/FIXME/NOTE tags
-	  ;modeline          ; snazzy, Atom-inspired modeline, plus API
+	  modeline          ; snazzy, Atom-inspired modeline, plus API , new fast modeline
 	  ;nav-flash         ; blink the current line after jumping
 	  ;neotree           ; a project drawer, like NERDTree for vim
 	   treemacs          ; a project drawer, like neotree but cooler
@@ -45,7 +45,7 @@
 	  ;unicode           ; extended unicode support for various languages
 	   vc-gutter         ; vcs diff in the fringe
 	   vi-tilde-fringe   ; fringe tildes to mark beyond EOB
-	   window-select     ; visually switch windows
+	   ;window-select     ; visually switch windows
 
 	   :editor
 	   (format +onsave)  ; automated prettiness
@@ -104,7 +104,7 @@
 	  ;latex             ; writing papers in Emacs has never been so fun
 	  ;ledger            ; an accounting system in Emacs
 	  ;lua               ; one-based indices? one-based indices
-	   markdown          ; writing docs for people to ignore
+	  ;markdown          ; writing docs for people to ignore
 	  ;nim               ; python + lisp at the speed of c
 	  ;nix               ; I hereby declare "nix geht mehr!"
 	  ocaml             ; an objective camel
@@ -128,7 +128,7 @@
 	   (sh +fish)        ; she sells (ba|z|fi)sh shells on the C xor
 	  ;solidity          ; do you need a blockchain? No.
 	  ;swift             ; who asked for emoji variables?
-	  web               ; the tubes
+	  ;web               ; the tubes
 
 	   ;; Applications are complex and opinionated modules that transform Emacs
 	   ;; toward a specific purpose. They may have additional dependencies and

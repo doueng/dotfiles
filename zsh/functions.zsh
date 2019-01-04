@@ -58,8 +58,28 @@ function speedtestzsh () {
 	done
 }
 
+function hex () {
+    printf "%x\n" $1
+}
+
+function int () {
+    printf "%d\n" $1
+}
+
+# needs zsh
+function bin () {
+    echo $(([##2] $1 ))
+}
+
 # restart shell
-functions rz () {
+function rz () {
     exec $SHELL
     source ~/.zprofile
+}
+
+# doom emacs
+function updatedoom () {
+    for cmd in upgrade update compile;
+        do ~/.emacs.d/bin/doom -y $cmd;
+    done
 }

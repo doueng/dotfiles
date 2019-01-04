@@ -28,7 +28,7 @@
 		".stack-work"))
 
 ;; Create a new workspace when switching projects.
-(setq +workspaces-on-switch-project-behavior t)
+;; (setq +workspaces-on-switch-project-behavior t)
 
 ;; no auto comment on new line
 ;; (advice-remove 'doom*newline-indent-and-continue-comments);
@@ -84,9 +84,9 @@
 (setq undo-tree-history-directory-alist '(("." . "~/.doom.d/undo")))
 
 ;; c-mode
-(setq-default c-basic-offset 4
-			  indent-tabs-mode t
-			  tab-width 4)
+;; (setq-default c-basic-offset 4
+;; 			  indent-tabs-mode t
+;; 			  tab-width 4)
 
 ;; Cider
 (setq cider-auto-jump-to-error nil)
@@ -116,9 +116,13 @@
 
 ;; Whitespace
 ;; C-c C-o to set offset (c-set-offset)
-(setq tab-width 4)
-(setq indent-tabs-mode t)
-(setq c-basic-offset 4)
+;; (setq-default indent-tabs-mode t)
+;; (setq tab-width 4) ; or any other preferred value
+;; (defvaralias 'c-basic-offset 'tab-width)
+;; (defvaralias 'cperl-indent-level 'tab-width)
+;; (setq c-default-style "linux" c-basic-offset 4)
+;; (setq indent-tabs-mode t)
+;; (setq c-basic-offset 4)
 ;; (setq c-offsets-alist '(arglist-cont-nonempty . +)) ;; force indent to use tabs!!!!
 ;; (setq arglist-cont-nonempty 8)
 
@@ -144,5 +148,13 @@
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message nil)
 
+;; iedit mode -- edit variables
+
+;; make emacs compatible with tiling window managers
+(setq frame-resize-pixelwise t)
+
 ;; Load keybindings file
 (load! "+bindings")
+
+;; Prevents the unstyled mode-line flash at startup
+(setq-default mode-line-format nil)

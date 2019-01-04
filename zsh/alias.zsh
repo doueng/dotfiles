@@ -96,4 +96,5 @@ alias "$"=""
 eval $(opam env)
 alias oc=ocamlopt
 
+# update 
 alias updateantibody="antibody bundle < $ZSH_FOLDER/antibody_plugins.txt > $ZSH_FOLDER/antibody_plugins.sh"
