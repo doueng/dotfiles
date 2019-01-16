@@ -1,6 +1,7 @@
 local SHOW_CURSOR="\x1B[?25h"
 local HIDE_CURSOR="\x1B[?25l"
-local UNDERSCORE_CURSOR="\E]50;CursorShape=2\C-G"
+#local UNDERSCORE_CURSOR="\E]50;CursorShape=2\C-G"
+local UNDERSCORE_CURSOR="\e[4 q"
 
 print -n $HIDE_CURSOR
 function zle-keymap-select zle-line-init zle-line-finish

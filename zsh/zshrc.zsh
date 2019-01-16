@@ -12,3 +12,12 @@ source $ZSH_FOLDER/completion.zsh
 source $ZSH_FOLDER/prompt.zsh
 source $ZSH_FOLDER/fzf.zsh
 
+# opam configuration
+test -r /home/doueng/.opam/opam-init/init.zsh && . /home/doueng/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# open new shell where the last one left off
+cd $(cat ~/.last_dir)
+trap 'echo $PWD > ~/.last_dir' EXIT
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+

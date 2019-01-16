@@ -1,6 +1,5 @@
-# open
-alias o="open"
-alias oa="open -a"
+# sway
+alias src="vi ~/.config/sway/config"
 
 # zsh
 alias ezsh="exec zsh"
@@ -12,7 +11,14 @@ alias PATH="env | grep PATH | tr : '\n'"
 alias week="date +%V"
 
 # ls
-alias ls="ls -G"
+case $(uname) in
+    Darwin)
+        alias ls="ls -G"
+    ;;
+    Linux)
+        alias ls="ls --color"
+    ;;
+esac
 alias la="ls -a"
 alias ll="ls -lh"
 alias lla="ll -a"
@@ -86,15 +92,31 @@ alias tree="tree -I node_modules"
 alias e="emacsclient -c -n $1"
 alias ee="emacsclient -e $1"
 
-# make
-alias make="bear gmake"
+# make that produces compile_commands.json
+# needed for rtags in emacs
+alias gbm="bear gmake"
+alias bm="bear make"
 
 # for pasting shell commands
 alias "$"=""
 
 # ocaml
-eval $(opam env)
+#eval $(opam env)
 alias oc=ocamlopt
+
+# yay
+alias yayuninstall="yay -Rns $1"
+alias yaygitupdate="yay -Syu --devel --timeupdate"
+alias yayprune="yay -Yc"
+
+# trash-cli
+alias trash="trash-put"
+
+# logout without being at login shell
+alias loginf="pkill -KILL -u $USER"
+
+# system info
+alias battery="acpi"
 
 # update 
 alias updateantibody="antibody bundle < $ZSH_FOLDER/antibody_plugins.txt > $ZSH_FOLDER/antibody_plugins.sh"

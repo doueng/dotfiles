@@ -47,14 +47,14 @@ extract() {
   fi
 }
 
-function mkdcd () {
+function mk () {
 	mkdir $1 && cd $1
 }
 
 function speedtestzsh () {
 	for i in $(seq 1 10)
 	do
-		/usr/bin/time zsh -i -c exit
+		time zsh -i -c exit
 	done
 }
 
@@ -82,4 +82,8 @@ function updatedoom () {
     for cmd in upgrade update compile;
         do ~/.emacs.d/bin/doom -y $cmd;
     done
+}
+
+function dgcl () {
+    gcl "https://github.com/doueng/$1.git"
 }

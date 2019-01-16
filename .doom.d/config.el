@@ -1,13 +1,10 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 
-;; Fancy titlebar for MacOS
-(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
-(add-to-list 'default-frame-alist '(ns-appearance . dark))
-(setq ns-use-proxy-icon  nil)
-(setq frame-title-format nil)
-
 ;; projectile
 (setq projectile-globally-ignored-file-suffixes '(".o"
+                                                  ".cmi"
+                                                  ".cmx"
+                                                  ".out"
 												  ".DS_Store"))
 (setq projectile-globally-ignored-directories
 	  '(".idea"
@@ -27,8 +24,8 @@
 		".svn"
 		".stack-work"))
 
-;; Create a new workspace when switching projects.
-;; (setq +workspaces-on-switch-project-behavior t)
+;; set font
+(setq doom-font (font-spec :family "SFMono" :size 24))
 
 ;; no auto comment on new line
 ;; (advice-remove 'doom*newline-indent-and-continue-comments);
@@ -36,19 +33,18 @@
 ;; (advice-remove 'newline-and-indent #'doom*newline-and-indent)
 ;; (advice-remove 'evil-insert-newline-below #'+evil*insert-newline-below-and-respect-comments)
 
-;; custom themes
-(add-to-list 'custom-theme-load-path "/Users/Admin/.doom.d/themes")
-
 ;; parinfer
-(setq parinfer-extensions '(defaults pretty-parens evil))
+;; (setq parinfer-extensions '(defaults pretty-parens evil))
 
 ;; No line numbers
 (setq display-line-numbers-type nil)
 
+(setq confirm-kill-emacs nil)
+
 ;; Smooth scrolling
 (setq scroll-step            1
-	  scroll-conservatively  10000
-	  mouse-wheel-scroll-amount '(1 ((shift) . 1))
+	  scroll-conservatively  10000)
+	  mouse-wheel-scroll-amount '(1 ((shift) . 1)
 	  mouse-wheel-progressive-speed nil
 	  mouse-wheel-follow-mouse 't)
 
@@ -153,8 +149,8 @@
 ;; make emacs compatible with tiling window managers
 (setq frame-resize-pixelwise t)
 
-;; Load keybindings file
-(load! "+bindings")
-
 ;; Prevents the unstyled mode-line flash at startup
 (setq-default mode-line-format nil)
+
+;; Load keybindings file
+(load! "+bindings")

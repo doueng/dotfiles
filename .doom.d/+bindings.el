@@ -2,21 +2,21 @@
 
 (map!
  (:map override
-	:gnvime "M-A-i" #'anki-editor-insert-note
-	:gnvime "M-§" #'other-frame
-	:gnvime "M-j" #'my/eval-lisp
-	:gnvime "M-[" #'other-window
-	:gnvime "M-s" #'my/save-buffer
+	:gnvime "s-A-i" #'anki-editor-insert-note
+	:gnvime "s-§" #'other-frame
+	:gnvime "s-j" #'my/eval-lisp
+	:gnvime "s-[" #'other-window
+	:gnvime "s-s" #'my/save-buffer
 	[remap evil-snipe-s] #'evil-avy-goto-word-1-below
 	[remap evil-snipe-S] #'evil-avy-goto-word-1-above
-	:gnvime "M-j" #'evil-avy-goto-line-below
-	:gnvime "M-k" #'evil-avy-goto-line-above
+	:gnvime "s-j" #'evil-avy-goto-line-below
+	:gnvime "s-k" #'evil-avy-goto-line-above
 	:i "<backtab>" #'company-search-candidates
-	:gnvime "M-;" #'my/add-semi-colon
-	:gnvime "M-k" #'kill-this-buffer
-	:gnvime "M-/" #'evil-commentary-line
-	:gnvime "M-i" #'evil-switch-to-windows-last-buffer
-	:gnvime "M-v" #'clipboard-yank
-	:gnvime nil #'doom/delete-frame
-	:gnvime "M-w" #'delete-frame
+	:gnvime "s-;" #'my/add-semi-colon
+	:gnvime "s-c" #'kill-this-buffer
+	:gnvime "s-/" #'evil-commentary-line
+	:gnvime "s-i" #'evil-switch-to-windows-last-buffer
+	:gnvime "s-v" #'clipboard-yank
+    :gnvime "s-x" #'counsel-M-x
+    :i "s-<backspace>" #'evil-delete-backward-word
 	))
