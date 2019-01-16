@@ -1,0 +1,18 @@
+[options]
+audible_bell = false
+visible_bell = false
+mouse_autohide = true
+allow_bold = false
+dynamic_title = false
+scrollback_lines = 1000
+
+
+cursor_blink = OFF
+
+cursor_shape = UNDERLINE
+
+term = screen-256
+
+font = Iosevka 28px
+[colors]
+background = rgba(0, 0, 0, 0.7)
