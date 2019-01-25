@@ -71,9 +71,9 @@
   "clean whitespace, save all buffers and then flycheck"
   (interactive)
   (my/clean-buffer)
-  (save-some-buffers 'no-prompt)
   (when flycheck-mode
-	(flycheck-buffer)))
+	(flycheck-buffer)
+  (save-some-buffers 'no-prompt)))
 
 ;; persistant undo
 (setq undo-tree-auto-save-history t)

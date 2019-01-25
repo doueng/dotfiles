@@ -3,7 +3,7 @@
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # add rtags path
-export PATH="$PATH:/Users/Admin/.emacs.d/.local/etc/rtags/rtags-2.20/bin"
+export PATH="$PATH:~/.emacs.d/.local/etc/rtags/rtags-2.20/bin"
 
 # change language to english
 export LANG="en_US.UTF-8"
@@ -13,11 +13,6 @@ export EDITOR=nvim
 export VISUAL=nvim
 export VIMRC=~/.config/nvim/init.vim
 
-# android
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH="$PATH:$ANDROID_HOME/tools"
-export PATH="$PATH:$ANDROID_HOME/platform-tools"
-
 # Customize to your needs...
 export KEYTIMEOUT=1
 
@@ -26,20 +21,7 @@ export MANWIDTH=60
 
 # -S disable line wrapping
 # -R displays ANSI color escape sequences in "raw" form
-export LESS='-S -R'
-
-# homebrew
-export HOMEBREW_NO_AUTO_UPDATE=1
-
-# llvm
-export LDFLAGS="-L/usr/local/opt/llvm/lib"
-export CPPFLAGS="-I/usr/local/opt/llvm/include"
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
-
-# gcc
-export PATH="/usr/local/Cellar/gcc/8.2.0/bin:$PATH"
-
+export LESS="-S -R"
 
 # remove path duplicates
 typeset -aU path

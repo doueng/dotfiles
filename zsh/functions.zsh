@@ -79,9 +79,11 @@ function rz () {
 
 # doom emacs
 function updatedoom () {
+    pkill emacs;
     for cmd in upgrade update compile;
         do ~/.emacs.d/bin/doom -y $cmd;
     done
+    emacs --bg-daemon;
 }
 
 function dgcl () {

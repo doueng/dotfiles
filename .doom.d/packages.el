@@ -10,8 +10,9 @@
 
 (package! anki-editor)
 (package! pdf-tools)
+(package! caps-lock)
 
 ;; disable ivy-rich since it is very slow
-(package! ivy-rich :disable t)
+;; (package! ivy-rich :disable t)
 
 (package! frames-only-mode)
