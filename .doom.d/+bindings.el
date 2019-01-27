@@ -18,5 +18,6 @@
 	:gnvime "s-i" #'evil-switch-to-windows-last-buffer
 	:gnvime "s-v" #'clipboard-yank
     :gnvime "s-x" #'counsel-M-x
+    ;; :gnvime "ctrl-k" #'
     :i "s-<backspace>" #'evil-delete-backward-word
 	))
