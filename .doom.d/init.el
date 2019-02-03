@@ -33,7 +33,7 @@
 	  ;evil-goggles      ; display visual hints when editing in evil
 	  ;fci               ; a `fill-column' indicator
 	   hl-todo           ; highlight TODO/FIXME/NOTE tags
-	  modeline          ; snazzy, Atom-inspired modeline, plus API , new fast modeline
+	  ;modeline          ; snazzy, Atom-inspired modeline, plus API , new fast modeline
 	  ;nav-flash         ; blink the current line after jumping
 	  ;neotree           ; a project drawer, like NERDTree for vim
 	   treemacs          ; a project drawer, like neotree but cooler

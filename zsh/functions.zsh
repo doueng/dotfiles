@@ -86,6 +86,12 @@ function updatedoom () {
     emacs --bg-daemon;
 }
 
+function recompiledoom () {
+    pkill emacs;
+    ~/.emacs.d/bin/doom -y recompile;
+    emacs --bg-daemon;
+}
+
 function dgcl () {
     gcl "https://github.com/doueng/$1.git"
 }

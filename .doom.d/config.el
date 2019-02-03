@@ -27,6 +27,37 @@
 ;; set font
 (setq doom-font (font-spec :family "SFMono" :size 24))
 
+;; tabs
+(require 'seq)
+(defun my/buffer-list ()
+  (seq-filter
+   (lambda (buffer)
+     (if (string-suffix-p "*" (buffer-name buffer))
+         nil
+       buffer))
+   (seq-take
+    (buffer-list (selected-frame))
+    30)))
+
+(setq my/index -1)
+(defun my/update-tabs ()
+  (setq header-line-format
+        (mapconcat
+         (lambda (b)
+           (format "(%d %s)"
+                   (setq my/index (+ my/index 1))
+                   (buffer-name b)))
+         (my/buffer-list)
+         " "))
+  (setq my/index -1))
+
+(add-hook! 'buffer-list-update-hook #'my/update-tabs)
+
+(defun my/switch-tab (n)
+  (interactive)
+  (switch-to-buffer (buffer-name (nth n (my/buffer-list)))))
+
+
 ;; no auto comment on new line
 ;; (advice-remove 'doom*newline-indent-and-continue-comments);
 (advice-remove #'newline-and-indent 'doom*newline-indent-and-continue-comments)
@@ -71,9 +102,9 @@
   "clean whitespace, save all buffers and then flycheck"
   (interactive)
   (my/clean-buffer)
+  (save-some-buffers 'no-prompt)
   (when flycheck-mode
-	(flycheck-buffer)
-  (save-some-buffers 'no-prompt)))
+	(flycheck-buffer)))
 
 ;; persistant undo
 (setq undo-tree-auto-save-history t)
