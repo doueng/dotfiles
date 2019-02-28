@@ -1,5 +1,8 @@
 # sway
-alias src="vi ~/.config/sway/config"
+alias swrc="vi ~/.config/sway/config"
+
+# cd
+alias ...="../.."
 
 # zsh
 alias ezsh="exec zsh"

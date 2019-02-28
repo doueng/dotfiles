@@ -8,8 +8,7 @@ bindkey "^h" backward-delete-char
 
 
 # history
-bindkey "^k" history-beginning-search-backward
-bindkey "^j" history-beginning-search-forward
+bindkey -M viins "^k" vi-cmd-mode
 bindkey -M vicmd "k" history-substring-search-up
 bindkey -M vicmd "j" history-substring-search-down
 
@@ -20,4 +19,3 @@ clear_screen () {
 
 zle -N clear_screen
 bindkey "meta+k" clear-screen
-#bindkey ^k clear_screen

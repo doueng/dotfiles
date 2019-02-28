@@ -9,9 +9,6 @@
 	   (lookup           ; helps you navigate your code and documentation
 		+docsets)        ; ...or in Dash docsets locally
 	   snippets          ; my elves. They type so I don't have to
-	   spellcheck        ; tasing you for misspelling mispelling
-	   (syntax-checker   ; tasing you for every semicolon you forget
-		+childframe)     ; use childframes for error popups (Emacs 26+ only)
 	   ;;workspaces        ; tab emulation, persistence & separate workspaces
 
 	   :completion
@@ -28,7 +25,7 @@
 	  ;deft              ; notational velocity for Emacs
 	   doom              ; what makes DOOM look the way it does
 	   ;;doom-dashboard    ; a nifty splash screen for Emacs
-	   ;doom-modeline     ; a snazzy Atom-inspired mode-line
+	   ;; doom-modeline     ; a snazzy Atom-inspired mode-line
 	   ;;doom-quit         ; DOOM quit-message prompts when you quit Emacs
 	  ;evil-goggles      ; display visual hints when editing in evil
 	  ;fci               ; a `fill-column' indicator
@@ -48,17 +45,20 @@
 	   ;window-select     ; visually switch windows
 
 	   :editor
+       ;; fold
 	   (format +onsave)  ; automated prettiness
+       ;; lispy
 	   multiple-cursors  ; editing in many places at once
 	   ;; parinfer          ; turn lisp into python, sort of
 	   rotate-text       ; cycle region at point between text candidates
 
 	   :emacs
-	   dired             ; making dired pretty [functional]
-	   ediff             ; comparing files in Emacs
+	   (dired     ; making dired pretty [functional]
+        ;; +ranger
+        ;; +icons
+        )
 	   electric          ; smarter, keyword-based electric-indent
 	   ;; eshell            ; a consistent, cross-platform shell (WIP)
-	   hideshow          ; basic code-folding support
 	   imenu             ; an imenu sidebar and searchable code index
 	   term              ; terminals in Emacs
 	   vc                ; version-control and Emacs, sitting in a tree
@@ -69,20 +69,25 @@
 	   editorconfig      ; let someone else argue about tabs vs spaces
 	  ;ein               ; tame Jupyter notebooks with emacs
 	  gist              ; interacting with github gists
-	  macos             ; MacOS-specific commands
+	  ;macos             ; MacOS-specific commands
 	  make              ; run make tasks from Emacs
-	  magit             ; a git porcelain for Emacs
+	  (magit +forge)             ; a git porcelain for Emacs
 	  ;password-store    ; password manager for nerds
 	  ;pdf               ; pdf enhancements
 	  ;prodigy           ; FIXME managing external services & code builders
 	  ;rgb               ; creating color strings
+      ;terraform
 	  ;tmux              ; an API for interacting with tmux
 	  upload            ; map local to remote projects via ssh/ftp
+      lsp
+      ;; flyspell
+      flycheck
 	  ;wakatime
+      ;vterm
 
 	   :lang
 	  assembly          ; assembly for fun or debugging
-	  (cc +irony +rtags); C/C++/Obj-C madness
+      (cc +lsp)
 	  clojure           ; java with a lisp
 	  ;common-lisp       ; if you've seen one lisp, you've seen them all
 	  ;coq               ; proofs-as-programs
@@ -95,7 +100,7 @@
 	   emacs-lisp        ; drown in parentheses
 	  ;ess               ; emacs speaks statistics
 	  ;go                ; the hipster dialect
-	  ;(haskell +intero) ; a language that's lazier than I am
+	  (haskell +intero) ; a language that's lazier than I am
 	  ;hy                ; readability of scheme w/ speed of python
 	  ;idris             ;
 	  ;(java +meghanada) ; the poster child for carpal tunnel syndrome
@@ -107,7 +112,7 @@
 	  ;markdown          ; writing docs for people to ignore
 	  ;nim               ; python + lisp at the speed of c
 	  ;nix               ; I hereby declare "nix geht mehr!"
-	  ocaml             ; an objective camel
+      ocaml             ; an objective camel
 	   (org              ; organize your plain life in plain text
 		+attach          ; custom attachment system
 		+babel           ; running code in org
@@ -118,14 +123,14 @@
 	  ;php               ; perl's insecure younger brother
 	  ;plantuml          ; diagrams for confusing people more
 	  ;purescript        ; javascript, but functional
-	  python            ; beautiful is better than ugly
+	  (python +lsp)            ; beautiful is better than ugly
 	  ;qt                ; the 'cutest' gui framework ever
 	  ;racket            ; a DSL for DSLs
 	  ;rest              ; Emacs as a REST client
 	  ;ruby              ; 1.step do {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
-	  rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
+	  (rust +lsp)              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
 	  ;scala             ; java, but good
-	   (sh +fish)        ; she sells (ba|z|fi)sh shells on the C xor
+	  sh        ; she sells (ba|z|fi)sh shells on the C xor
 	  ;solidity          ; do you need a blockchain? No.
 	  ;swift             ; who asked for emoji variables?
 	  ;web               ; the tubes
@@ -150,7 +155,6 @@
 	   ;; For literate config users. This will tangle+compile a config.org
 	   ;; literate config in your `doom-private-dir' whenever it changes.
 	  ;literate
-
 	   ;; The default module sets reasonable defaults for Emacs. It also
 	   ;; provides a Spacemacs-inspired keybinding scheme, a custom yasnippet
 	   ;; library, and additional ex commands for evil-mode. Use it as a

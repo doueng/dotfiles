@@ -2,6 +2,7 @@ ZSH_FOLDER=~/dotfiles/zsh/
 
 source $ZSH_FOLDER/antibody_plugins.sh
 source $ZSH_FOLDER/cursor.zsh
+source $ZSH_FOLDER/ssh.zsh
 source $ZSH_FOLDER/man.zsh
 source $ZSH_FOLDER/vim.zsh
 source $ZSH_FOLDER/setopt.zsh
