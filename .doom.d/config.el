@@ -8,22 +8,10 @@
         ".DS_Store"))
 
 (setq projectile-globally-ignored-directories
-      '(".idea"
-        "vscode"
-        "nvim"
+      '("vscode"
         "node_modules"
-        ".ensime_cache"
-        ".eunit"
         ".git"
-        ".hg"
-        ".fslckout"
-        "_FOSSIL_"
-        ".bzr"
-        "_darcs"
-        ".tox"
-        "*.dSYM"
-        ".svn"
-        ".stack-work"))
+        "*.dSYM"))
 
 ;; Don't show "." or ".."
 (setq ivy-extra-directories nil)
@@ -85,6 +73,5 @@
   (cider-load-buffer)
   (cider-eval-defun-at-point))
 
-;; Load keybindings file
 (load! "+tabs")
 (load! "+bindings")
