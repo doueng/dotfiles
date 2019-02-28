@@ -1,6 +1,5 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 
-;; projectile
 (setq projectile-globally-ignored-file-suffixes
       '(".o"
         ".cmi"
@@ -80,23 +79,11 @@
   (when flycheck-mode
     (flycheck-buffer)))
 
-;; eval lisp
-(defun local/eval-clojure ()
+(defun my/eval-clojure ()
+  (interactive)
   (my/save-buffer)
   (cider-load-buffer)
   (cider-eval-defun-at-point))
-
-(defun local/eval-elisp ()
-  (my/save-buffer)
-  (+eval:region 10 10))
-
-(defun my/eval-lisp ()
-  (interactive)
-  (cond
-   ((equal major-mode 'clojure-mode)
-    (local/eval-clojure))
-   ((equal major-mode 'emacs-lisp-mode)
-    (local/eval-elisp))))
 
 ;; Load keybindings file
 (load! "+tabs")
