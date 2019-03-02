@@ -14,20 +14,20 @@
 	:gnvime "s-;" #'my/add-semi-colon
 	:gnvime "s-c" #'kill-this-buffer
 	:gnvime "s-/" #'evil-commentary-line
-	:gnvime "s-i" #'evil-switch-to-windows-last-buffer
+	:gnvime "s-i" #'tab-to-tab-stop
+	:gnvime "s-t" #'evil-switch-to-windows-last-buffer
 	:gnvime "s-v" #'clipboard-yank
-    :gnvime "s-x" #'counsel-M-x
-    :gnvime "s-[" #'evil-prev-buffer
-    :gnvime "s-]" #'evil-next-buffer
-    :gnvime "s-1" (lambda! (my/switch-tab 1))
-    :gnvime "s-2" (lambda! (my/switch-tab 2))
-    :gnvime "s-3" (lambda! (my/switch-tab 3))
-    :gnvime "s-4" (lambda! (my/switch-tab 4))
-    :gnvime "s-5" (lambda! (my/switch-tab 5))
-    :gnvime "s-6" (lambda! (my/switch-tab 6))
-    :gnvime "s-7" (lambda! (my/switch-tab 7))
-    :gnvime "s-8" (lambda! (my/switch-tab 8))
-    :gnvime "s-9" (lambda! (my/switch-tab 9))
-    ;; :gnvime "<ctrl>-k" nil
-    :i "s-<backspace>" #'evil-delete-backward-word
+	:gnvime "s-x" #'counsel-M-x
+	:gnvime "s-[" #'evil-prev-buffer
+	:gnvime "s-]" #'evil-next-buffer
+	:gnvime "s-1" (lambda! (my/switch-tab 1))
+	:gnvime "s-2" (lambda! (my/switch-tab 2))
+	:gnvime "s-3" (lambda! (my/switch-tab 3))
+	:gnvime "s-4" (lambda! (my/switch-tab 4))
+	:gnvime "s-5" (lambda! (my/switch-tab 5))
+	:gnvime "s-6" (lambda! (my/switch-tab 6))
+	:gnvime "s-7" (lambda! (my/switch-tab 7))
+	:gnvime "s-8" (lambda! (my/switch-tab 8))
+	:gnvime "s-9" (lambda! (my/switch-tab 9))
+	:i "s-<backspace>" #'evil-delete-backward-word
 	))
