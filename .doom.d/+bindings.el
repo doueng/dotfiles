@@ -14,8 +14,8 @@
 	:gnvime "s-;" #'my/add-semi-colon
 	:gnvime "s-c" #'kill-this-buffer
 	:gnvime "s-/" #'evil-commentary-line
-	:gnvime "s-i" #'tab-to-tab-stop
-	:gnvime "s-t" #'evil-switch-to-windows-last-buffer
+	:gnvime "s-t" #'tab-to-tab-stop
+	:gnvime "s-i" #'evil-switch-to-windows-last-buffer
 	:gnvime "s-v" #'clipboard-yank
 	:gnvime "s-x" #'counsel-M-x
 	:gnvime "s-[" #'evil-prev-buffer
