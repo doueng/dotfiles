@@ -7,10 +7,8 @@
 ;; (package! highlight-symbol)
 ;; (package! uniquify)
 ;; (package! indium)
+;; (package! frames-only-mode)
 
 (package! anki-editor)
 (package! pdf-tools)
 (package! caps-lock)
-
-(package! frames-only-mode)
-

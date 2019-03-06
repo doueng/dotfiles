@@ -37,12 +37,12 @@ alias vrc="vi ~/.config/nvim/init.vim"
 alias diff="colordiff"
 
 # top
-alias topm="top -o mem"
-alias topc="top -o cpu"
+alias topm="top -o %MEM"
+alias topc="top -o %CPU"
 
 # clipboard
-alias pbc="pbcopy"
-alias pbp="pbpaste"
+alias copy="wl-copy"
+alias paste="wl-paste"
 
 # git
 alias gcl="git clone"
@@ -64,14 +64,11 @@ alias lcs="leetcode submit"
 alias vg="valgrind"
 alias vgfull="valgrind --leak-check=full"
 
-# chrome
-alias chrome="o -a Google\ Chrome"
-
 # which
 alias which="which -a"
 
 # python
-alias new_env="python3 -m venv"
+alias new_venv="python3 -m venv"
 
 # fasd
 eval "$(fasd --init posix-alias zsh-hook zsh-ccomp)"
@@ -97,8 +94,8 @@ alias ee="emacsclient -e $1"
 
 # make that produces compile_commands.json
 # needed for rtags in emacs
-alias gbm="bear gmake"
-alias bm="bear make"
+alias gbm="bear gmake -j"
+alias bm="bear make -j"
 
 # for pasting shell commands
 alias "$"=""
@@ -116,7 +113,7 @@ alias yayprune="yay -Yc"
 alias trash="trash-put"
 
 # logout without being at login shell
-alias loginf="pkill -KILL -u $USER"
+alias logoutf="pkill -KILL -u $USER"
 
 # system info
 alias battery="acpi"
