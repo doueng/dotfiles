@@ -50,8 +50,8 @@
 (add-to-list 'auto-mode-alist '("\\.o\\'" . hexl-mode))
 
 ;; Clojurescript
-(setq-default inf-clojure-generic-cmd "planck -d")
-(add-hook 'clojure-mode-hook #'inf-clojure-minor-mode)
+;; (setq-default inf-clojure-generic-cmd "planck -d")
+;; (add-hook 'clojure-mode-hook #'inf-clojure-minor-mode)
 
 (defun my/add-semi-colon ()
   "Add semi-colon at end of line, escape to normal mode"

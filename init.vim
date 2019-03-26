@@ -17,7 +17,7 @@ call plug#end()
 " basic stuff
 filetype plugin indent on
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
-set incsearch ignorecase smartcase hlsearch
+set incsearch ignorecase smartcase
 set ruler laststatus=2 showcmd showmode
 set list listchars=trail:»,tab:»-
 set fillchars+=vert:\ 

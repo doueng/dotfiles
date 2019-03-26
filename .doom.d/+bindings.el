@@ -30,4 +30,5 @@
 	:gnvime "s-8" (lambda! (my/switch-tab 8))
 	:gnvime "s-9" (lambda! (my/switch-tab 9))
 	:i "s-<backspace>" #'evil-delete-backward-word
+	:gnvime "s-!" (lambda! (universal-argument) (shell-command))
 	))

@@ -127,13 +127,13 @@
 	  ;qt                ; the 'cutest' gui framework ever
 	  ;racket            ; a DSL for DSLs
 	  ;rest              ; Emacs as a REST client
-	  ;ruby              ; 1.step do {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
+	  ruby              ; 1.step do {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
 	  (rust +lsp)              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
 	  ;scala             ; java, but good
 	  sh        ; she sells (ba|z|fi)sh shells on the C xor
 	  ;solidity          ; do you need a blockchain? No.
 	  ;swift             ; who asked for emoji variables?
-	  ;web               ; the tubes
+	  web               ; the tubes
 
 	   ;; Applications are complex and opinionated modules that transform Emacs
 	   ;; toward a specific purpose. They may have additional dependencies and

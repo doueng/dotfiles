@@ -3,6 +3,8 @@ alias swrc="vi ~/.config/sway/config"
 
 # cd
 alias ...="../.."
+alias dc="cd"
+alias cdd="cd ~/Downloads"
 
 # zsh
 alias ezsh="exec zsh"
@@ -22,9 +24,10 @@ case $(uname) in
         alias ls="ls --color"
     ;;
 esac
+alias l="ls -lh"
+alias sl="l"
 alias la="ls -a"
-alias ll="ls -lh"
-alias lla="ll -a"
+alias lla="l -a"
 
 # vim
 alias vi=nvim
@@ -51,6 +54,7 @@ alias gc="git commit -m"
 alias gs="git status"
 alias gau="git add -u"
 alias gl="git log"
+alias gg='cd $(git rev-parse --show-cdup)'
 
 # chmod
 alias exe="chmod 755"

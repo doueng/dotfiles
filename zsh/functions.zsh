@@ -20,8 +20,13 @@ nuke_node_modules() {
   find . -name node_modules -type d -prune -exec rm -rf '{}' +
 }
 
+# leetcode download
+lcd() {
+	lc show $1 >> $(lc show $1 -g -l python | ag "Source Code" | awk '{print $4}')
+}
+
 compress() {
-    tar -czvf $1.tar.gz $1
+	tar -czvf $1.tar.gz $1
 }
 
 extract() {
@@ -47,51 +52,146 @@ extract() {
   fi
 }
 
-function mk () {
-	mkdir $1 && cd $1
+mk() {
+	mkdir -p -- "$1" || return
+	cd -- "$1"
 }
 
-function speedtestzsh () {
+speedtestzsh() {
 	for i in $(seq 1 10)
 	do
 		time zsh -i -c exit
 	done
 }
 
-function hex () {
-    printf "%x\n" $1
+hex() {
+	printf "%x\n" $1
 }
 
-function int () {
-    printf "%d\n" $1
+int() {
+	printf "%d\n" $1
 }
 
 # needs zsh
-function bin () {
-    echo $(([##2] $1 ))
+bin() {
+	echo $(([##2] $1 ))
 }
 
 # restart shell
-function rz () {
-    exec $SHELL
-    source ~/.zprofile
+rz() {
+	exec $SHELL
+	source ~/.zprofile
+}
+
+le() {
+   "$@" | less
 }
 
 # doom emacs
-function updatedoom () {
-    pkill emacs;
-    for cmd in upgrade update compile;
-        do ~/.emacs.d/bin/doom -y $cmd;
-    done
-    emacs --bg-daemon;
+updatedoom() {
+	pkill emacs;
+	for cmd in upgrade update compile;
+		do ~/.emacs.d/bin/doom -y $cmd;
+	done
+	emacs --bg-daemon;
 }
 
-function recompiledoom () {
-    pkill emacs;
-    ~/.emacs.d/bin/doom -y recompile;
-    emacs --bg-daemon;
+recompiledoom() {
+	pkill emacs;
+	~/.emacs.d/bin/doom -y recompile;
+	emacs --bg-daemon;
 }
 
-function dgcl () {
-    gcl "https://github.com/doueng/$1.git"
+dgcl() {
+	gcl "https://github.com/doueng/$1.git"
+}
+
+# Go to marked directory
+# Arabesque
+gm() {
+
+	# Refuse to deal with unwanted arguments
+	if [ "$#" -gt 0 ] ; then
+		printf >&2 'gd(): Unspecified argument\n'
+		return 2
+	fi
+
+	# Complain if mark not actually set yet
+	if [ -z "$PMD" ] ; then
+		printf >&2 'gd(): Mark not set\n'
+		return 1
+	fi
+
+	# Go to the marked directory
+	# shellcheck disable=SC2164
+	cd -- "$PMD"
+}
+
+# Set marked directory to given dir or current dir
+# Arabesque
+sm() {
+
+	# Accept up to one argument
+	if [ "$#" -gt 1 ] ; then
+		printf >&2 'md(): Too many arguments\n'
+		return 2
+	fi
+
+	# If argument given, change to it in subshell to get absolute path.
+	# If not, use current working directory.
+	if [ -n "$1" ] ; then
+		set -- "$(cd -- "$1" && printf '%s/' "$PWD")"
+		set -- "${1%%/}"
+	else
+		set -- "$PWD"
+	fi
+
+	# If that turned up empty, we have failed; the cd call probably threw an
+	# error for us too
+	[ -n "$1" ] || return
+
+	# Save the specified path in the marked directory var
+	# shellcheck disable=SC2034
+	PMD=$1
+}
+
+# Print the marked directory
+# Arabesque
+pm() {
+	if [ -z "$PMD" ] ; then
+		printf >&2 'pmd(): Mark not set\n'
+		return 1
+	fi
+	printf '%s\n' "$PMD"
+}
+
+# If the argument is a directory, change to it.  If it's a file, change to its
+# parent.  Stands for "get to".
+# Arabesque
+gt() {
+
+	# Check argument count
+	if [ "$#" -ne 1 ] ; then
+		printf >&2 'gt(): Need one argument\n'
+		return 2
+	fi
+
+	# Make certain there are no trailing slashes to foul us up, and anchor path
+	# if relative
+	while : ; do
+		case $1 in
+			*/) set -- "${1%/}" ;;
+			/*) break ;;
+			*) set -- "$PWD"/"$1" ;;
+		esac
+	done
+
+	# If target isn't a directory, chop to its parent
+	if ! [ -d "$1" ] ; then
+		set -- "${1%/*}"
+	fi
+
+	# Try to change into the determined directory, or root if empty
+	# shellcheck disable=SC2164
+	cd -- "${1:-/}"
 }
