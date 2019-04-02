@@ -69,7 +69,7 @@ alias vg="valgrind"
 alias vgfull="valgrind --leak-check=full"
 
 # which
-alias which="which -a"
+alias wa="which -a"
 
 # python
 alias new_venv="python3 -m venv"
