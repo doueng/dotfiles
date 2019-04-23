@@ -1,0 +1,10 @@
+cowsay
+
+#random colors
+lolcat
+
+cmatrix
+doge
+
+#ascii art
+figlet

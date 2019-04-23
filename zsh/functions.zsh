@@ -96,7 +96,7 @@ le() {
 # doom emacs
 updatedoom() {
 	pkill emacs;
-	for cmd in upgrade update compile;
+	for cmd in upgrade update;
 		do ~/.emacs.d/bin/doom -y $cmd;
 	done
 	emacs --bg-daemon;

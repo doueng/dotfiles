@@ -1,5 +1,9 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 
+;; Open files in mode based on file ending
+(add-to-list 'auto-mode-alist '("\\.zsh\\'" . sh-mode))
+(add-to-list 'auto-mode-alist '("\\.o\\'" . hexl-mode))
+
 (setq-default projectile-globally-ignored-file-suffixes
 			  '(".o"
 				".cmi"
@@ -13,14 +17,22 @@
 				".git"
 				"*.dSYM"))
 
+(setq-default +format-on-save-enabled-modes
+  '(not emacs-lisp-mode  ; elisp's mechanisms are good enough
+		sql-mode
+		cc-mode))
+
 ;; Don't show "." or ".."
 (setq-default ivy-extra-directories nil)
 
+(setq-default +evil-want-o/O-to-continue-comments nil)
 (setq-default mode-line-format nil)
 (setq-default doom-font (font-spec :family "SFMono" :size 24))
 (setq-default display-line-numbers-type nil)
 (setq-default confirm-kill-emacs nil)
 (setq-default c-basic-offset 4)
+(setq-default c-tab-always-indent t)
+(setq-default tab-width 4)
 (setq-default indent-tabs-mode t)
 (setq-default lsp-ui-flycheck-live-reporting nil)
 (setq-default lsp-ui-sideline-enable nil)
@@ -44,10 +56,6 @@
 ;; Flycheck
 (setq-default flycheck-check-syntax-automatically nil)
 (setq-default +flycheck-on-escape nil)
-
-;; Open files in mode based on file ending
-(add-to-list 'auto-mode-alist '("\\.zsh\\'" . sh-mode))
-(add-to-list 'auto-mode-alist '("\\.o\\'" . hexl-mode))
 
 ;; Clojurescript
 ;; (setq-default inf-clojure-generic-cmd "planck -d")
