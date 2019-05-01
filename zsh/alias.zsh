@@ -16,14 +16,7 @@ alias PATH="env | grep PATH | tr : '\n'"
 alias week="date +%V"
 
 # ls
-case $(uname) in
-    Darwin)
-        alias ls="ls -G"
-    ;;
-    Linux)
-        alias ls="ls --color"
-    ;;
-esac
+alias ls="ls --color"
 alias l="ls -lh"
 alias sl="l"
 alias la="ls -a"
@@ -86,9 +79,6 @@ alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
 alias v='f -e nvim'      # quick opening files with neovim
 
-# curl
-alias curlo="curl -O"
-
 # tree
 alias tree="tree -I node_modules"
 
@@ -98,7 +88,6 @@ alias ee="emacsclient -e $1"
 
 # make that produces compile_commands.json
 # needed for rtags in emacs
-alias gbm="bear gmake -j"
 alias bm="bear make -j"
 
 # for pasting shell commands
@@ -106,7 +95,7 @@ alias "$"=""
 
 # ocaml
 #eval $(opam env)
-alias oc=ocamlopt
+#alias oc=ocamlopt
 
 # yay
 alias yayuninstall="yay -Rns $1"
@@ -124,3 +113,6 @@ alias battery="acpi"
 
 # update 
 alias updateantibody="antibody bundle < $ZSH_FOLDER/antibody_plugins.txt > $ZSH_FOLDER/antibody_plugins.sh"
+
+# gdb
+alias gdb="gdb -q"

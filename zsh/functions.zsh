@@ -4,23 +4,6 @@ function swap()
     local TMPFILE=tmp.$$
     mv "$1" $TMPFILE && mv "$2" "$1" && mv $TMPFILE "$2"
 }
-#Homebrew
-brewbump() {
-  echo -e "\\nUpdating Homebrew...\\n"
-  brew update
-  echo -e "\\nUpgrading Homebrew...\\n"
-  brew upgrade
-  echo -e "\\nBrew cask upgrade\\n"
-  brew cask upgrade
-  echo -e "\\nCleaning your mess...\\n"
-  brew cleanup
-  brew prune
-  echo -e "\\nDone.\\n"
-}
-
-brewlist() {
-  tr "  " '\n' <<< "$(brew list)"
-}
 
 nuke_node_modules() {
   find . -name node_modules -type d -prune -exec rm -rf '{}' +
