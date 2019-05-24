@@ -10,3 +10,6 @@ setopt AUTO_CD
 setopt AUTO_LIST
 setopt AUTO_MENU
 setopt ALWAYS_TO_END
+
+# disable ctrl-s flow control
+stty -ixon

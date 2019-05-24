@@ -3,12 +3,7 @@
 
 (doom! :feature
 	  ;debugger          ; FIXME stepping through code, to help you add bugs
-	   eval              ; run code, run (also, repls)
-	   (evil +everywhere); come to the dark side, we have cookies
 	   ;file-templates    ; auto-snippets for empty files
-	   (lookup           ; helps you navigate your code and documentation
-		+docsets)        ; ...or in Dash docsets locally
-	   snippets          ; my elves. They type so I don't have to
 	   ;;workspaces        ; tab emulation, persistence & separate workspaces
 
 	   :completion
@@ -45,6 +40,8 @@
 	   ;window-select     ; visually switch windows
 
 	   :editor
+	   (evil +everywhere); come to the dark side, we have cookies
+	   snippets          ; my elves. They type so I don't have to
 	   ;; fold
 	   ;; (format +onsave)  ; automated prettiness
 	   ;; lispy
@@ -64,8 +61,11 @@
 	   vc                ; version-control and Emacs, sitting in a tree
 
 	   :tools
+	   (lookup           ; helps you navigate your code and documentation
+		+docsets)        ; ...or in Dash docsets locally
 	  ;ansible
 	  ;docker
+	   eval              ; run code, run (also, repls)
 	   editorconfig      ; let someone else argue about tabs vs spaces
 	  ;ein               ; tame Jupyter notebooks with emacs
 	  gist              ; interacting with github gists

@@ -1,0 +1,98 @@
+alt + Return
+	kitty --single-instance
+alt + d
+	dmenu_run
+alt + e
+    emacsclient -nc -e '(evil-prev-buffer)'
+alt + u
+	$BROWSER
+alt + shift + u
+    $BROWSER --incognito
+control + h
+    xdotool keyup h; xdotool key Left
+control + j
+    xdotool keyup j; xdotool key Down
+control + k
+    xdotool keyup k; xdotool key Up
+control + l
+    xdotool keyup l; xdotool key Right
+XF86LaunchA
+    notify-send "$(date +'%R %a %b %e')" "$(acpi -b | cut -c 25-27)"
+XF86AudioRaiseVolume
+    amixer set Master playback 5%+
+XF86AudioLowerVolume
+    amixer set Master playback 5%-
+XF86AudioMute
+    amixer set Master toggle
+XF86MonBrightnessDown
+    light -U 10%
+XF86MonBrightnessUp
+    light -A 10%
+XF86LaunchB
+    systemctl suspend
+
+Print
+	maim pic-full-$(date '+%y%m%d-%H%M-%S').png
+# Pick screenshot type
+shift + Print
+	maimpick
+
+# Pause audio
+alt + {_,shift +} p
+	lmc {toggle,pause}
+# Changes to next/previous tracks
+alt + {comma,period}
+	lmc {prev,next}
+# Restart track
+alt + shift + less
+	lmc replay
+# Increase volume
+alt + {equal,plus}
+	lmc up {5,15}
+# Decrease volume
+alt {_,shift +} + minus
+	lmc down {5,15}
+# Seek foward in song
+alt + {_,shift +} bracketright
+	lmc forward {10,120}
+# Seek backward in song
+alt + {_,shift +} bracketleft
+	lmc back {10,120}
+
+# Function keys
+# Show readme
+alt + F1
+	groff -mom $HOME/.local/share/larbs/readme.mom -Tpdf | zathura -
+# F2 is restart in i3 right now.
+# Change display
+alt + F3
+	displayselect
+# Hibernate
+alt + F4
+	prompt 'Hibernate computer?' 'sudo systemctl suspend'
+# Restart/rescan wifi/eth networks
+alt + F5
+	sudo -A systemctl restart NetworkManager
+# Start torrent daemon/open interface
+alt + F6
+	torwrap
+# toggle torrent daemon
+alt + F7
+	td-togggle
+# sync email
+alt + F8
+	mailsync
+# Mount a USB drive or Android device
+alt + F9
+	dmenumount
+# Unmount a USB drive or Android device
+alt + F10
+	dmenuumount
+# Search with Duckduckgo
+alt + F11
+	ducksearch
+# Network Manager interface
+alt + F12
+	$TERMINAL -e sudo -A nmtui
+
+

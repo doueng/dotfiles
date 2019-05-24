@@ -1,3 +1,12 @@
+# add dir to ~/.last_dir
+function lastdir ()
+{
+    if [ -n "$1" ]; then
+        echo "$1" > ~/.last_dir
+    else
+        echo $PWD > ~/.last_dir
+    fi
+}
 # swap two filenames
 function swap()
 {
@@ -92,13 +101,12 @@ recompiledoom() {
 }
 
 dgcl() {
-	gcl "https://github.com/doueng/$1.git"
+	gcl "git@github.com:doueng/$1.git"
 }
 
 # Go to marked directory
 # Arabesque
 gm() {
-
 	# Refuse to deal with unwanted arguments
 	if [ "$#" -gt 0 ] ; then
 		printf >&2 'gd(): Unspecified argument\n'
@@ -119,7 +127,6 @@ gm() {
 # Set marked directory to given dir or current dir
 # Arabesque
 sm() {
-
 	# Accept up to one argument
 	if [ "$#" -gt 1 ] ; then
 		printf >&2 'md(): Too many arguments\n'

@@ -25,3 +25,8 @@ export LESS="-S -R"
 
 # remove path duplicates
 typeset -aU path
+
+# terminal
+export TERMINAL='kitty'
+export BROWSER='vivaldi-stable'
+

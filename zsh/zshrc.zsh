@@ -11,9 +11,7 @@ source $ZSH_FOLDER/functions.zsh
 source $ZSH_FOLDER/completion.zsh
 source $ZSH_FOLDER/prompt.zsh
 source $ZSH_FOLDER/fzf.zsh
-if [[ $(uname) == 'Darwin' ]]; then
-    source $ZSH_FOLDER/mac.zsh
-fi
+[ $(uname) = "Darwin" ] && source $ZSH_FOLDER/mac.zsh
 
 # open new shell where the last one left off
 cd $(cat ~/.last_dir)
