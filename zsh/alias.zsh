@@ -17,8 +17,9 @@ alias week="date +%V"
 
 # ls
 alias ls="ls --color"
-alias l="ls -lh"
-alias sl="l"
+alias sl="ls"
+alias ll="ls -lh"
+alias l="ll"
 alias la="ls -a"
 alias lla="l -a"
 

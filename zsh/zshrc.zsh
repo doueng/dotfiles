@@ -18,4 +18,3 @@ cd $(cat ~/.last_dir)
 trap 'echo $PWD > ~/.last_dir' EXIT
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-

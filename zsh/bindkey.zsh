@@ -1,5 +1,5 @@
 # make delete work
-bindkey "^?" backward-delete-char	
+bindkey "^?" backward-delete-char
 bindkey "^h" backward-delete-char
 # history
 bindkey -M viins "^k" vi-cmd-mode
