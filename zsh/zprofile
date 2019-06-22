@@ -28,5 +28,3 @@ typeset -aU path
 
 # terminal
 export TERMINAL='kitty'
-export BROWSER='vivaldi-stable'
-
