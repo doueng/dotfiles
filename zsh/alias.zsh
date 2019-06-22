@@ -38,8 +38,8 @@ alias topm="top -o %MEM"
 alias topc="top -o %CPU"
 
 # clipboard
-alias copy="wl-copy"
-alias paste="wl-paste"
+alias copy="xclip -selection c"
+alias paste="xclip -selection c -o"
 
 # git
 alias gcl="git clone"
