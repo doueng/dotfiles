@@ -1,16 +1,10 @@
-# sway
-alias swrc="vi ~/.config/sway/config"
-
 # cd
 alias ...="../.."
 alias dc="cd"
-alias cdd="cd ~/Downloads"
+alias cdd='cd $HOME/Downloads'
 
 # zsh
 alias ezsh="exec zsh"
-
-# path
-alias PATH="env | grep PATH | tr : '\n'"
 
 # Get week number
 alias week="date +%V"
@@ -27,8 +21,8 @@ alias lla="l -a"
 alias vi=nvim
 
 # dotfiles
-alias zrc="vi ~/.zshrc"
-alias vrc="vi ~/.config/nvim/init.vim"
+alias zrc='vi $HOME/.zshrc'
+alias vrc='vi $HOME/.config/nvim/init.vim'
 
 # colordiff
 alias diff="colordiff"
@@ -48,6 +42,7 @@ alias gc="git commit -m"
 alias gs="git status"
 alias gau="git add -u"
 alias gl="git log"
+alias gb="git branch"
 alias gg='cd $(git rev-parse --show-cdup)'
 
 # chmod
@@ -83,37 +78,31 @@ alias v='f -e nvim'      # quick opening files with neovim
 # tree
 alias tree="tree -I node_modules"
 
-# emacs
-alias e="emacsclient -c -n $1"
-alias ee="emacsclient -e $1"
-
 # make that produces compile_commands.json
 # needed for rtags in emacs
 alias bm="bear make -j"
 
 # for pasting shell commands
-alias "$"=""
+alias '$'=''
 
 # ocaml
 #eval $(opam env)
 #alias oc=ocamlopt
 
-# yay
-alias yayuninstall="yay -Rns $1"
-alias yaygitupdate="yay -Syu --devel --timeupdate"
-alias yayprune="yay -Yc"
-
 # trash-cli
 alias trash="trash-put"
 
 # logout without being at login shell
-alias logoutf="pkill -KILL -u $USER"
+alias logoutf='pkill -KILL -u $USER'
 
 # system info
 alias battery="acpi"
 
-# update 
-alias updateantibody="antibody bundle < $ZSH_FOLDER/antibody_plugins.txt > $ZSH_FOLDER/antibody_plugins.sh"
+# update
+alias updateantibody='antibody bundle < $ZSH_FOLDER/antibody_plugins.txt > $ZSH_FOLDER/antibody_plugins.sh'
 
 # gdb
 alias gdb="gdb -q"
+
+# git bare
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

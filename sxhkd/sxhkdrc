@@ -8,14 +8,6 @@ alt + u
 	$BROWSER
 alt + shift + u
     $BROWSER --incognito
-control + h
-    xdotool keyup h; xdotool key Left
-control + j
-    xdotool keyup j; xdotool key Down
-control + k
-    xdotool keyup k; xdotool key Up
-control + l
-    xdotool keyup l; xdotool key Right
 XF86LaunchA
     notify-send "$(date +'%R %a %b %e')" "$(acpi -b | cut -c 25-27)"
 XF86AudioRaiseVolume
