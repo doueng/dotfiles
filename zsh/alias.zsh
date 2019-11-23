@@ -36,14 +36,16 @@ alias copy="xclip -selection c"
 alias paste="xclip -selection c -o"
 
 # git
-alias gcl="git clone"
-alias ga="git add"
-alias gc="git commit -m"
-alias gs="git status"
-alias gau="git add -u"
-alias gl="git log"
-alias gb="git branch"
+alias gcl='git clone'
+alias ga='git add'
+alias gc='git commit -m'
+alias gs='git status'
+alias gau='git add -u'
+alias gl='git log'
+alias gb='git branch'
 alias gg='cd $(git rev-parse --show-cdup)'
+alias gch='git checkout'
+alias gd='git diff'
 
 # chmod
 alias exe="chmod 755"
