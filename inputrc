@@ -1,20 +1,64 @@
-set bell-style none
-set meta-flag on
+# Don't mess with the eighth bit of characters
 set input-meta on
-set convert-meta off
 set output-meta on
+
+# Never ring any sort of bell during line reading
+set bell-style none
+
+# Let readline do stuff like word killing, not stty(1)
+set bind-tty-special-chars off
+
+# Ignore case when matching and completing paths
+set completion-ignore-case on
+
+# Treat underscores and hyphens the same way for completion purposes
+set completion-map-case on
+
+# Show me up to 5,000 completion items, don't be shy
+set completion-query-items 5000
+
+# Don't display control characters like ^C if I input them
+set echo-control-characters off
+
+# Expand tilde to full path on completion
+set expand-tilde on
+
+# Keep the cursor column when iterating through history
+set history-preserve-point on
+
+# Don't match dotfiles unless there's a dot
+set match-hidden-files off
+
+# Don't paginate possible completions
+set page-completions off
+
+# Goes nicely with ls(1) -x/--format=across
+set print-completions-horizontally on
+
+# Don't actually modify my history
+set revert-all-at-newline on
+
+# Show multiple completions on first tab press
+set show-all-if-ambiguous on
+
+# Don't re-complete already completed text in the middle of a word
+set skip-completed-text on
 
 set show-mode-in-prompt on
 set vi-cmd-mode-string "\1\e[?25 h\2"
 set vi-ins-mode-string "\1\e[?25 l\2"
+set keyseq-timeout 10
+
+set colored-completion-prefix on
+set colored-stats on
 
 set editing-mode vi
-
 $if mode=vi
 set keymap vi-command
 # these are for vi-command mode
 # alt+k
 "\ek": clear-screen
+Meta-k: clear-screen
 Control-k: history-search-backward
 j: history-search-forward
 k: history-search-backward
@@ -23,6 +67,7 @@ set keymap vi-insert
 # these are for vi-insert mode
 # alt+k
 "\ek": clear-screen
+Meta-k: clear-screen
 Control-k: history-search-backward
 
 $endif
