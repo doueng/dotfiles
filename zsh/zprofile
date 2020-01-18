@@ -2,6 +2,8 @@
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
+export PATH="/usr/local/opt/texinfo/bin:$PATH"
+
 # add rtags path
 export PATH="$PATH:~/.emacs.d/.local/etc/rtags/rtags-2.20/bin"
 
