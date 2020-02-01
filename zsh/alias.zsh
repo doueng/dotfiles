@@ -49,6 +49,9 @@ alias gs="git status"
 alias gau="git add -u"
 alias gl="git log"
 alias gg='cd $(git rev-parse --show-cdup)'
+alias gch='git checkout'
+alias gb='git branch'
+alias gd='git diff'
 
 # chmod
 alias exe="chmod 755"

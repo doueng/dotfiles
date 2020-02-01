@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: ifnerror
-# key: ifne
-# --
-if (NULL == ${})
-   ft_error(__FILE__, __LINE__);

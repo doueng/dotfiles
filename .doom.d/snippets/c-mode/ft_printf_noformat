@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: ft_printf_noformat
-# key: pn
-# --
-ft_printf("${}\n");
