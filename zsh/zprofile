@@ -1,17 +1,16 @@
-
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # pip
 export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 
+# chrome
+export PATH="$HOME/chrome-control:$PATH"
+
 # doom
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
-# go
-export GOPATH="$HOME/gocode"
-export PATH="$PATH:$GOPATH/bin"
-
+# texinfo
 export PATH="/usr/local/opt/texinfo/bin:$PATH"
 
 # add rtags path
@@ -43,6 +42,13 @@ export TERMINAL='kitty'
 export UBER_SECUREVAULT_ROLE=dev
 
 # go monorepo
-export MONOREPO_GOPATH_MODE=1
-export "GOPATH=$HOME/go-code"
-export "PATH=$GOPATH/bin:$HOME/go-code/tools:$PATH"
+#export MONOREPO_GOPATH_MODE=1
+#export "GOPATH=$HOME/go-code"
+#export "PATH=$GOPATH/bin:$HOME/go-code/tools:$PATH"
+
+# go
+export GOPATH="$HOME/gocode"
+#export PATH="/usr/local/bin:$GOPATH"
+
+# hailstorm
+export PATH="/usr/local/opt/curl-openssl/bin:$PATH"

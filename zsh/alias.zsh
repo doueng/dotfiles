@@ -42,12 +42,13 @@ alias copy="xclip -selection c"
 alias paste="xclip -selection c -o"
 
 # git
-alias gcl="git clone"
-alias ga="git add"
-alias gc="git commit -m"
-alias gs="git status"
-alias gau="git add -u"
-alias gl="git log"
+alias grh='git reset head~ --soft'
+alias gcl='git clone'
+alias ga='git add'
+alias gc='git commit -m'
+alias gs='git status'
+alias gau='git add -u'
+alias gl='git log'
 alias gg='cd $(git rev-parse --show-cdup)'
 alias gch='git checkout'
 alias gb='git branch'
@@ -120,3 +121,6 @@ alias updateantibody="antibody bundle < $ZSH_FOLDER/antibody_plugins.txt > $ZSH_
 
 # gdb
 alias gdb="gdb -q"
+
+# chrome
+alias dedup="chrome.js dedup --yes"
