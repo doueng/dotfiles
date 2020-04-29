@@ -1,3 +1,4 @@
 zdharma/fast-syntax-highlighting
 zsh-users/zsh-history-substring-search
 agkozak/agkozak-zsh-prompt
+agkozak/zsh-z

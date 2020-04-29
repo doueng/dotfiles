@@ -42,6 +42,8 @@ alias copy="xclip -selection c"
 alias paste="xclip -selection c -o"
 
 # git
+alias gr='git restore'
+alias grs='git restore --staged'
 alias grh='git reset head~ --soft'
 alias gcl='git clone'
 alias ga='git add'
@@ -71,18 +73,6 @@ alias wa="which -a"
 
 # python
 alias new_venv="python3 -m venv"
-
-# fasd
-eval "$(fasd --init posix-alias zsh-hook zsh-ccomp)"
-alias a='fasd -a'        # any
-alias s='fasd -si'       # show / search / select
-alias d='fasd -d'        # directory
-alias f='fasd -f'        # file
-alias sd='fasd -sid'     # interactive directory selection
-alias sf='fasd -sif'     # interactive file selection
-alias z='fasd_cd -d'     # cd, same functionality as j in autojump
-alias zz='fasd_cd -d -i' # cd with interactive selection
-alias v='f -e nvim'      # quick opening files with neovim
 
 # tree
 alias tree="tree -I node_modules"

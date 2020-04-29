@@ -48,7 +48,11 @@ export UBER_SECUREVAULT_ROLE=dev
 
 # go
 export GOPATH="$HOME/gocode"
+export PATH="$HOME/gocode/bin:$PATH"
 #export PATH="/usr/local/bin:$GOPATH"
 
 # hailstorm
 export PATH="/usr/local/opt/curl-openssl/bin:$PATH"
+
+# uber
+export PATH="/opt/uber/bin/:$PATH"

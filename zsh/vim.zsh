@@ -15,4 +15,3 @@ for m in visual viopp; do
 	bindkey -M $m $c select-bracketed
   done
 done
-

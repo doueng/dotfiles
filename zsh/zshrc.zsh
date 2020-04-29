@@ -5,10 +5,10 @@ source $ZSH_FOLDER/cursor.zsh
 source $ZSH_FOLDER/man.zsh
 source $ZSH_FOLDER/vim.zsh
 source $ZSH_FOLDER/setopt.zsh
-source $ZSH_FOLDER/bindkey.zsh
 source $ZSH_FOLDER/alias.zsh
 source $ZSH_FOLDER/functions.zsh
 source $ZSH_FOLDER/completion.zsh
+source $ZSH_FOLDER/bindkey.zsh
 source $ZSH_FOLDER/prompt.zsh
 source $ZSH_FOLDER/fzf.zsh
 [ $(uname) = "Darwin" ] && source $ZSH_FOLDER/mac.zsh
@@ -24,3 +24,5 @@ source "$HOME/.profile_lda"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/engstrand/.sdkman"
 [[ -s "/Users/engstrand/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/engstrand/.sdkman/bin/sdkman-init.sh"
+
+PATH=$(zsh -fc "typeset -TU P=$PATH p; echo \$P")
