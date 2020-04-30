@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ft_printf
+# key: p
+# --
+ft_printf("${1:%d}\n", ${});

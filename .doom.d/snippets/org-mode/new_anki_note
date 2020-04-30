@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: new_anki_note
+# key: n
+# --
+* Item
+  :PROPERTIES:
+  :ANKI_DECK: Default
+  :ANKI_NOTE_TYPE: Basic (and reversed card)
+  :END:
+*** Front
+   bash ${}
+*** Back
+   bash ${}
