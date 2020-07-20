@@ -53,8 +53,12 @@ alias gau='git add -u'
 alias gl='git log'
 alias gg='cd $(git rev-parse --show-cdup)'
 alias gch='git checkout'
-alias gb='git branch'
+alias gchm='git checkout master'
+alias gb='git --no-pager branch'
 alias gd='git diff'
+alias gdm='git diff master'
+alias gdh='git diff head'
+alias gdh~='git diff head~'
 
 # chmod
 alias exe="chmod 755"
@@ -94,23 +98,26 @@ alias "$"=""
 
 # yay
 alias yayuninstall="yay -Rns $1"
-alias yaygitupdate="yay -Syu --devel --timeupdate"
-alias yayprune="yay -Yc"
+alias yaygitupdate='yay -Syu --devel --timeupdate'
+alias yayprune='yay -Yc'
 
 # trash-cli
-alias trash="trash-put"
+alias trash='trash-put'
 
 # logout without being at login shell
 alias logoutf="pkill -KILL -u $USER"
 
 # system info
-alias battery="acpi"
+alias battery='acpi'
 
 # update 
 alias updateantibody="antibody bundle < $ZSH_FOLDER/antibody_plugins.txt > $ZSH_FOLDER/antibody_plugins.sh"
 
 # gdb
-alias gdb="gdb -q"
+alias gdb='gdb -q'
 
 # chrome
-alias dedup="chrome.js dedup --yes"
+alias dedup='chrome.js dedup --yes'
+
+# toolbox
+alias toolbox='TERM=xterm-256color toolbox'

@@ -31,7 +31,7 @@ set colorcolumn=80
 set clipboard=unnamedplus
 
 " space as leader
-let mapleader = "\<space>"
+let mapleader = " "
 
 " gitignore for fzf
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
