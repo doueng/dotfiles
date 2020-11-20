@@ -1,3 +1,4 @@
+export PATH="/usr/local/Cellar/qemu/5.0.0_2/bin:$PATH"
 alias ls="ls -G"
 alias copy="pbcopy"
 alias paste="pbpaste"

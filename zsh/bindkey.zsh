@@ -7,8 +7,8 @@ bindkey -M vicmd "k" history-substring-search-up
 bindkey -M vicmd "j" history-substring-search-down
 
 # alt-k
-bindkey -M viins "^[k" clear-screen
-bindkey -M vicmd "^[k" clear-screen
+#bindkey -M viins "^[k" clear-screen
+#bindkey -M vicmd "^[k" clear-screen
 
 # ctrl-o
 bindkey -s '^o' '\eddicd -\n'

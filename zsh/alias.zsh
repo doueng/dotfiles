@@ -48,6 +48,7 @@ alias grh='git reset head~ --soft'
 alias gcl='git clone'
 alias ga='git add'
 alias gc='git commit -m'
+alias gca='git commit --amend'
 alias gs='git status'
 alias gau='git add -u'
 alias gl='git log'
@@ -59,6 +60,7 @@ alias gd='git diff'
 alias gdm='git diff master'
 alias gdh='git diff head'
 alias gdh~='git diff head~'
+alias gclean='git clean -fd'
 
 # chmod
 alias exe="chmod 755"

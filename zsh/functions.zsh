@@ -85,6 +85,10 @@ le() {
    "$@" | less
 }
 
+ep() {
+	echo -e `paste`
+}
+
 # doom emacs
 updatedoom() {
 	pkill emacs;

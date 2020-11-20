@@ -1,6 +1,9 @@
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# brew
+export PATH="/usr/local/sbin:$PATH"
+
 # pip
 export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 
@@ -12,6 +15,9 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 
 # texinfo
 export PATH="/usr/local/opt/texinfo/bin:$PATH"
+
+# bins
+export PATH="$HOME/dotfiles/bin:$PATH"
 
 # add rtags path
 export PATH="$PATH:~/.emacs.d/.local/etc/rtags/rtags-2.20/bin"
