@@ -5,12 +5,12 @@
 (add-to-list 'auto-mode-alist '("\\.o\\'" . hexl-mode))
 
 (setq-default projectile-globally-ignored-file-suffixes
-							'(".o"
-								".cmi"
-								".elc"
-								".cmx"
-								".out"
-								".DS_Store"))
+	      '(".o"
+		".cmi"
+		".elc"
+		".cmx"
+		".out"
+		".DS_Store"))
 
 (setq-default projectile-globally-ignored-directories
 							'("vscode"
@@ -119,44 +119,6 @@
 	(cider-load-buffer)
 	(cider-eval-defun-at-point))
 
-(use-package ejira
-	:init
-	(setq jiralib2-url              "https://jeng.uberinternal.com"
-				jiralib2-auth             'token
-				jiralib2-token						""
-
-				ejira-org-directory       "~/jira"
-				ejira-projects            '("MOTOK")
-
-				ejira-priorities-alist    '(("Highest" . ?A)
-																		("High"    . ?B)
-																		("Medium"  . ?C)
-																		("Low"     . ?D)
-																		("Lowest"  . ?E))
-				ejira-todo-states-alist   '(("To Do"       . 1)
-																		("In Progress" . 2)
-																		("Done"        . 3)))
-	:config
-	;; Tries to auto-set custom fields by looking into /editmeta
-	;; of an issue and an epic.
-	(add-hook 'jiralib2-post-login-hook #'ejira-guess-epic-sprint-fields)
-
-	;; They can also be set manually if autoconfigure is not used.
-	;; (setq ejira-sprint-field       'customfield_10001
-	;;       ejira-epic-field         'customfield_10002
-	;;       ejira-epic-summary-field 'customfield_10004)
-
-	(require 'ejira-agenda)
-
-	;; Make the issues visisble in your agenda by adding `ejira-org-directory'
-	;; into your `org-agenda-files'.
-	(add-to-list 'org-agenda-files ejira-org-directory)
-
-	;; Add an agenda view to browse the issues that
-	(org-add-agenda-custom-command
-	 '("j" "My JIRA issues"
-		 ((ejira-jql "resolution = unresolved and assignee = currentUser()"
-								 ((org-agenda-overriding-header "Assigned to me")))))))
 ;;;; Golang support
 (defun my-go-mode-hook ()
 	(whitespace-mode -1) ; don't highlight hard tabs

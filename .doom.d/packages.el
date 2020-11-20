@@ -9,12 +9,12 @@
 ;; (package! indium)
 ;; (package! frames-only-mode)
 
-(package! anki-editor)
-(package! pdf-tools)
-(package! caps-lock)
-(package! ox-jira)
+;(package! anki-editor)
+;(package! pdf-tools)
+;(package! caps-lock)
+;;(package! ox-jira)
 
-(package! ejira :recipe
-	(:host github
-				 :repo "nyyManni/ejira"
-				 :branch "master"))
+;(package! ejira :recipe
+	;(:host github
+				 ;:repo "nyyManni/ejira"
+				 ;:branch "master"))
