@@ -1,5 +1,3 @@
-set __fish_config_dir ~/dotfiles/fish/functions
-
 set fish_color_autosuggestion grey
 set fish_greeting ''
 set fish_escape_delay_ms 10
