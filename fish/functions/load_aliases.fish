@@ -11,7 +11,7 @@ function load_aliases
     alias week="date +%V"
 
     # ls
-    alias ls="ls --color"
+    alias ls="exa"
     alias sl="ls"
     alias ll="ls -lh"
     alias l="ll"
@@ -23,13 +23,6 @@ function load_aliases
 
     # dotfiles
     alias vf='vi $HOME/.config/fish/config.fish'
-
-    # colordiff
-    alias diff="colordiff"
-
-    # top
-    alias topm="top -o %MEM"
-    alias topc="top -o %CPU"
 
     # clipboard
     alias copy="xclip -selection c"
@@ -87,9 +80,6 @@ function load_aliases
 
     # gdb
     alias gdb="gdb -q"
-
-    # git bare
-    alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
     # bluetooth
     alias restart_bluetooth="sudo systemctl restart bluetooth"
