@@ -1,3 +1,12 @@
+set SHOW_CURSOR "\x1B[?25h"
+set HIDE_CURSOR "\x1B[?25l"
+
+printf $HIDE_CURSOR
+
+function hide_curstor_postexec --on-event fish_postexec
+     printf "$HIDE_CURSOR"
+end
+
 set fish_color_autosuggestion grey
 set fish_greeting ''
 set fish_escape_delay_ms 10
@@ -10,5 +19,4 @@ bind -M insert '!' bind_bang
 bind -M insert '$' bind_dollar
 bind -M insert \cf accept-autosuggestion execute
 
-load_cursor
 load_aliases
