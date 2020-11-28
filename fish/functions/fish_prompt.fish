@@ -170,14 +170,25 @@ end
 function fish_mode_prompt
 end
 
+function show-git-toplevel
+   git rev-parse --show-toplevel
+end
+
 function fish_prompt
-    set -l cwd (pwd | string replace "$HOME" '~')
-
-    set_color $lucid_cwd_color
-    echo -sn "$cwd "
-    set_color normal
-
-    echo -n "$lucid_prompt_symbol "
+    if show-git-toplevel &> /dev/null
+      set -l toplevel (show-git-toplevel)
+      set -l base (basename $toplevel)
+      set -l git_cwd (pwd | string replace (show-git-toplevel) '')
+      set -l cwd (echo -n "$base$git_cwd")
+      set_color $lucid_cwd_color
+      echo -sn "$cwd "
+      set_color normal
+    else
+      set -l cwd (pwd | string replace "$HOME" '~')
+      set_color $lucid_cwd_color
+      echo -sn "$cwd "
+      set_color normal
+    end
 end
 
 function fish_right_prompt
