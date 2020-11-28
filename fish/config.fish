@@ -26,6 +26,55 @@ function hide_curstor_postexec --on-event fish_postexec
 	printf "$HIDE_CURSOR"
 end
 
+function mk
+    mkdir $argv && cd $argv
+end
+
+# Function for copying files and directories, even recursively.
+# ex: copy DIRNAME LOCATIONS
+# result: copies the directory and all of its contents.
+function copy
+    set count (count $argv | tr -d \n)
+    if test "$count" = 2; and test -d "$argv[1]"
+	set from (echo $argv[1] | trim-right /)
+	set to (echo $argv[2])
+        command cp -r $from $to
+    else
+        command cp $argv
+    end
+end
+
+# Function for printing a column (splits input on whitespace)
+# ex: echo 1 2 3 | coln 3
+# output: 3
+function coln
+    while read -l input
+        echo $input | awk '{print $'$argv[1]'}'
+    end
+end
+
+# Function for printing a row
+# ex: seq 3 | rown 3
+# output: 3
+function rown --argument index
+    sed -n "$index p"
+end
+
+# Function for ignoring the first 'n' lines
+# ex: seq 10 | skip 5
+# results: prints everything but the first 5 lines
+function skip --argument n
+    tail +(math 1 + $n)
+end
+
+# Function for taking the first 'n' lines
+# ex: seq 10 | take 5
+# results: prints only the first 5 lines
+function take --argument number
+    head -$number
+end
+
+
 function bind_bang
   switch (commandline -t)
   case "!"
@@ -55,6 +104,17 @@ function de_nextd --description "Move forward in the directory history"
     commandline -f repaint
 end
 
+function nextd-or-complete --description "Move forward in the directory history or if the cmd line is not empty execute complete"
+    set -l cmd (commandline)
+    if test -z "$cmd"
+        de_nextd
+        commandline -f repaint
+    else
+        commandline -f complete
+    end
+end
+
+
 function de_prevd --description "Move back in the directory history"
     __fish_move_last dirprev dirnext
 
@@ -70,8 +130,7 @@ set fish_color_autosuggestion grey
 alias dc="cd"
 alias l="ls -lh"
 alias la="ls -lha"
-alias vf="vi $HOME/.config/fish/config.fish"
-alias vi="nvim $argv"
+alias vi='nvim $argv'
 alias gs="git status"
 alias gr="git reset"
 alias gch="git checkout"
@@ -84,9 +143,6 @@ alias restart_bluetooth="sudo systemctl restart bluetooth"
 alias ...="../.."
 alias dc="cd"
 alias cdd='cd $HOME/Downloads'
-
-# zsh
-alias ezsh="exec zsh"
 
 # Get week number
 alias week="date +%V"
@@ -103,8 +159,8 @@ alias lla="l -a"
 alias vi=nvim
 
 # dotfiles
-alias zrc='vi $HOME/.zshrc'
-alias vrc='vi $HOME/.config/nvim/init.vim'
+alias vf='vi $HOME/.config/fish/config.fish'
+
 
 # colordiff
 alias diff="colordiff"
@@ -153,7 +209,7 @@ alias new_venv="python3 -m venv"
 #alias s='fasd -si'       # show / search / select
 #alias d='fasd -d'        # directory
 #alias f='fasd -f'        # file
-##alias sd='fasd -sid'     # interactive directory selection
+#alias sd='fasd -sid'     # interactive directory selection
 #alias sf='fasd -sif'     # interactive file selection
 #alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 #alias zz='fasd_cd -d -i' # cd with interactive selection
@@ -194,9 +250,9 @@ set fish_escape_delay_ms 10
 # This is set with --underline by default
 set fish_color_valid_path
 
-bind -M insert \co 'cd -; commandline -f repaint'
-#bind -M insert \co 'de_prevd'
-#bind -M insert \ci 'de_nextd'
+#bind -M insert \co 'cd -; commandline -f repaint'
+bind -M insert \co 'de_prevd'
+bind -M insert \ci 'nextd-or-complete'
 bind -M insert '!' bind_bang
 bind -M insert '$' bind_dollar
 bind -M insert \cf accept-autosuggestion execute
