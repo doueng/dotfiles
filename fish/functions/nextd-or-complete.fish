@@ -4,6 +4,6 @@ function nextd-or-complete --description 'Move forward in the directory history 
         de_nextd
         commandline -f repaint
     else
-        commandline -f complete
+        commandline -f complete-and-search
     end
 end
