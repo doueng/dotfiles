@@ -1,8 +1,6 @@
 set SHOW_CURSOR "\x1B[?25h"
 set HIDE_CURSOR "\x1B[?25l"
 
-printf $HIDE_CURSOR
-
 function hide_curstor_postexec --on-event fish_postexec
     printf "$HIDE_CURSOR"
 end
