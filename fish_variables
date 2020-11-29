@@ -1,11 +1,13 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR EDITOR:nvim
+SETUVAR --path GIT_PATH:/Users/engstrand/\x2eaw/pex_resources/scripts/binaries/git
 SETUVAR HIDE_CURSOR:\x5cx1B\x5b\x3f25l
 SETUVAR KEYTIMEOUT:1
 SETUVAR LESS:\x2dS\x20\x2dR
 SETUVAR SHOW_CURSOR:\x5cx1B\x5b\x3f25h
-SETUVAR TERMINAL:kitty
+SETUVAR TERM:kitty
+SETUVAR TERMINAL:xterm\x2d256color
 SETUVAR VISUAL:nvim
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
@@ -39,6 +41,7 @@ SETUVAR fish_color_selection:normal
 SETUVAR fish_color_status:normal
 SETUVAR fish_color_user:normal
 SETUVAR fish_color_valid_path:normal
+SETUVAR fish_escape_delay_ms:10
 SETUVAR fish_greeting:
 SETUVAR fish_key_bindings:fish_vi_key_bindings
 SETUVAR fish_pager_color_completion:\x1d
