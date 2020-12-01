@@ -37,7 +37,7 @@ function __lucid_abort_check
     if set -q __lucid_check_pid
         set -l pid $__lucid_check_pid
         functions -e __lucid_on_finish_$pid
-        command kill $pid >/dev/null 2>&1
+        kill $pid >/dev/null 2>&1
         set -e __lucid_check_pid
     end
 end
@@ -57,15 +57,15 @@ function __lucid_git_status
     # Memoize results to avoid recomputation on subsequent redraws.
     if test -z $__lucid_git_static
         # Determine git working directory
-        set -l git_dir (command git --no-optional-locks rev-parse --absolute-git-dir 2>/dev/null)
+        set -l git_dir (git --no-optional-locks rev-parse --absolute-git-dir 2>/dev/null)
         if test $status -ne 0
             return 1
         end
 
-        set -l position (command git --no-optional-locks symbolic-ref --short HEAD 2>/dev/null)
+        set -l position (git --no-optional-locks symbolic-ref --short HEAD 2>/dev/null)
         if test $status -ne 0
             # Denote detached HEAD state with short commit hash
-            set position (command git --no-optional-locks rev-parse --short HEAD 2>/dev/null)
+            set position (git --no-optional-locks rev-parse --short HEAD 2>/dev/null)
             if test $status -eq 0
                 set position "@$position"
             end
@@ -102,7 +102,7 @@ function __lucid_git_status
                 block -l
 
                 set -g __lucid_check_pid 0
-                command fish --private --command "$cmd" >/dev/null 2>&1 &
+                command fish --private --command "$cmd" &> /dev/null &
                 set -l pid (jobs --last --pid)
 
                 set -g __lucid_check_pid $pid
@@ -170,25 +170,10 @@ end
 function fish_mode_prompt
 end
 
-function show-git-toplevel
-   git rev-parse --show-toplevel
-end
-
 function fish_prompt
-    if show-git-toplevel &> /dev/null
-      set -l toplevel (show-git-toplevel)
-      set -l base (basename $toplevel)
-      set -l git_cwd (pwd | string replace (show-git-toplevel) '')
-      set -l cwd (echo -n "$base$git_cwd")
-      set_color $lucid_cwd_color
-      echo -sn "$cwd "
-      set_color normal
-    else
-      set -l cwd (pwd | string replace "$HOME" '~')
-      set_color $lucid_cwd_color
-      echo -sn "$cwd "
-      set_color normal
-    end
+    set_color $lucid_cwd_color
+    echo -sn "$PROMPT_CWD "
+    set_color normal
 end
 
 function fish_right_prompt
@@ -202,6 +187,4 @@ function fish_right_prompt
             echo -sn "$git_state"
         end
     end
-
 end
-
