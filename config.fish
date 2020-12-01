@@ -1,18 +1,20 @@
 fish_add_path /usr/local/bin
 fish_add_path /opt/uber/bin
 fish_add_path "$HOME/bin"
-fish_add_path "$HOME/.aw/pex_resources/scripts/binaries"
+fish_add_path --append "$HOME/.aw/pex_resources/scripts/binaries"
 
-set -U EDITOR nvim
-set -U VISUAL nvim
-set -U KEYTIMEOUT 1
-set -U LESS "-S -R"
-set -U TERM kitty
+set -Ux EDITOR nvim
+set -Ux VISUAL nvim
+set -Ux KEYTIMEOUT 1
+set -Ux LESS "-S -R"
+set -Ux TERM kitty
+set -Ux UBER_LDAP_UID engstrand
 set -U SHOW_CURSOR "\x1B[?25h"
 set -U HIDE_CURSOR "\x1B[?25l"
 set -U fish_greeting ''
 set -U fish_escape_delay_ms 10
 set -U fish_color_valid_path
+set -g LAST_DIR (pwd)
 
 alias git /usr/local/bin/git
 alias basename /usr/bin/basename

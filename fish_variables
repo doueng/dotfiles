@@ -1,14 +1,15 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR EDITOR:nvim
+SETUVAR --export EDITOR:nvim
 SETUVAR --path GIT_PATH:/Users/engstrand/\x2eaw/pex_resources/scripts/binaries/git
 SETUVAR HIDE_CURSOR:\x5cx1B\x5b\x3f25l
-SETUVAR KEYTIMEOUT:1
-SETUVAR LESS:\x2dS\x20\x2dR
+SETUVAR --export KEYTIMEOUT:1
+SETUVAR --export LESS:\x2dS\x20\x2dR
 SETUVAR SHOW_CURSOR:\x5cx1B\x5b\x3f25h
-SETUVAR TERM:kitty
+SETUVAR --export TERM:kitty
 SETUVAR TERMINAL:xterm\x2d256color
-SETUVAR VISUAL:nvim
+SETUVAR --export UBER_LDAP_UID:engstrand
+SETUVAR --export VISUAL:nvim
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/Users/engstrand/g/\x2elocal/share/z/data
@@ -48,4 +49,4 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/Users/engstrand/bin\x1e/Users/engstrand/\x2eaw/pex_resources/scripts/binaries\x1e/opt/uber/bin\x1e/usr/local/bin
+SETUVAR fish_user_paths:/Users/engstrand/bin\x1e/opt/uber/bin\x1e/usr/local/bin\x1e/Users/engstrand/\x2eaw/pex_resources/scripts/binaries

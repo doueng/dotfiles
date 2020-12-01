@@ -40,6 +40,11 @@ function load_aliases
     alias gch-='git checkout -'
     alias gchm='git checkout master'
     alias gdm='git diff master'
+    alias gdh='git diff head'
+    alias grh='git reset head~'
+
+    alias pj='pbpaste | jq'
+    alias ep='pbpaste | echo -e'
 
     # chmod
     alias exe='chmod 755'
