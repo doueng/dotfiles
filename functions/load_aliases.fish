@@ -1,4 +1,9 @@
 function load_aliases
+    # paths
+    alias git /usr/local/bin/git
+    alias basename /usr/bin/basename
+    alias kill /bin/kill
+
     # Wifi
     alias internet='nmcli con up id Javaplein'
 

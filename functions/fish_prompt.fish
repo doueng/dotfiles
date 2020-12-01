@@ -170,34 +170,10 @@ end
 function fish_mode_prompt
 end
 
-function show-git-toplevel
-   git rev-parse --show-toplevel
-end
-
-function print_cwd
-    set -l cwd (pwd | string replace "$HOME" '~')
-    set_color $lucid_cwd_color
-    echo -sn "$cwd "
-    set_color normal
-end
-
 function fish_prompt
-    set -l curr_dir (pwd)
-
-    if [ $LAST_DIR = $curr_dir ]
-        print_cwd
-    else if git rev-parse --is-inside-work-tree &> /dev/null
-        set -l toplevel (show-git-toplevel)
-        set -l base (basename $toplevel)
-        set -l git_cwd (pwd | string replace $toplevel '')
-        set -l cwd (echo -n "$base$git_cwd")
-        set_color $lucid_cwd_color
-        echo -sn "$cwd "
-        set_color normal
-    else
-        print_cwd
-    end
-    set -g LAST_DIR $curr_dir
+    set_color $lucid_cwd_color
+    echo -sn "$PROMPT_CWD "
+    set_color normal
 end
 
 function fish_right_prompt

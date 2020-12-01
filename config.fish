@@ -14,12 +14,13 @@ set -U HIDE_CURSOR "\x1B[?25l"
 set -U fish_greeting ''
 set -U fish_escape_delay_ms 10
 set -U fish_color_valid_path
-set -g LAST_DIR (pwd)
 
-alias git /usr/local/bin/git
-alias basename /usr/bin/basename
-alias kill /bin/kill
+set_prompt_cwd
+function change_prompt_cwd --on-variable PWD
+    set_prompt_cwd
+end
 
+printf $HIDE_CURSOR
 function hide_curstor_postexec --on-event fish_postexec
     printf $HIDE_CURSOR
 end
