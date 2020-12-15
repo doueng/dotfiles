@@ -7,6 +7,8 @@
 #fish_add_path "$GO_PATH/bin"
 #fish_add_path "$HOME/go/bin"
 
+set -Ux fish_function_path $fish_function_path "$HOME/dotfiles/nix/fish/functions"
+set -Ux fish_complete_path $fish_complete_path "$HOME/dotfiles/nix/fish/completions"
 set -Ux TOKENIZER /Users/engstrand/tokenizer/payment-forwardservice/
 set -Ux TOKENIZER_CLI $TOKENIZER/cli/target/keymanagement.jar
 set -Ux EDITOR nvim
