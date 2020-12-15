@@ -69,6 +69,9 @@
     rnix-lsp
     s3cmd
     watchman
+    tree
+    git
+    fzf
 
     # Useful nix related tools
     cachix # adding/managing alternative binary caches hosted by Cachix

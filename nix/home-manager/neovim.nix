@@ -49,7 +49,6 @@ in
     vim-commentary
     vim-eunuch
     vim-fugitive
-    customVimPlugins.vim-haskell-module-name
     vim-pencil
     vim-polyglot
     vim-surround
