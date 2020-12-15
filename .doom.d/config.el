@@ -27,7 +27,7 @@
 
 (setq-default +evil-want-o/O-to-continue-comments nil)
 (setq-default mode-line-format nil)
-(setq-default doom-font (font-spec :family "SFMono" :size 24))
+;(setq-default doom-font (font-spec :family "SFMono" :size 24))
 (setq-default display-line-numbers-type nil)
 (setq-default confirm-kill-emacs nil)
 (setq-default c-basic-offset 4)
