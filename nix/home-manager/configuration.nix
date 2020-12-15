@@ -74,14 +74,11 @@
 
     # Useful nix related tools
     cachix # adding/managing alternative binary caches hosted by Cachix
-    mypkgs.comma # run software from without installing it
     lorri # improve `nix-shell` experience in combination with `direnv`
     niv # easy dependency management for nix projects
 
     # My custom nix related shell scripts
     myenv-script
-    mypkgs.prefmanager # tool for working with macOS defaults
-
   ];
 
   # This value determines the Home Manager release that your configuration is compatible with. This
