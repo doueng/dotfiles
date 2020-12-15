@@ -33,7 +33,6 @@
   ];
 
   programs.brew-bundle.masApps = {
-    Slack = 803453959;
     Xcode = 497799835;
   };
 }
