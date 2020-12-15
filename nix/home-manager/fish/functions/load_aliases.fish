@@ -30,7 +30,6 @@ function load_aliases
     alias vf='vi $HOME/.config/fish/config.fish'
 
     # git
-    alias git='/usr/local/bin/git'
     alias gcl='git clone'
     alias ga='git add'
     alias gc='git commit -m'

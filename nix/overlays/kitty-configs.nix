@@ -93,7 +93,7 @@ rec {
     inactive_tab_background = "#${base1}";
     inactive_tab_font_style = "normal";
 
-    shell = "/usr/local/bin/fish";
+    shell = "$HOME/.nix-profile/bin/fish";
     cursor_shape = "underline";
     cursor_blink_interval = 0;
     cursor = "#ffffff";
