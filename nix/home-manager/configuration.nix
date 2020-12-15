@@ -78,7 +78,7 @@
     niv # easy dependency management for nix projects
 
     # My custom nix related shell scripts
-    # myenv-script
+    myenv-script
   ];
 
   # This value determines the Home Manager release that your configuration is compatible with. This
