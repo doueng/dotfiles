@@ -1,40 +1,4 @@
 {
-    "comma": {
-        "branch": "master",
-        "description": null,
-        "homepage": null,
-        "owner": "Shopify",
-        "repo": "comma",
-        "rev": "4a62ec17e20ce0e738a8e5126b4298a73903b468",
-        "sha256": "0n5a3rnv9qnnsrl76kpi6dmaxmwj1mpdd2g0b4n1wfimqfaz6gi1",
-        "type": "tarball",
-        "url": "https://github.com/Shopify/comma/archive/4a62ec17e20ce0e738a8e5126b4298a73903b468.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "fish-plugin-done": {
-        "branch": "master",
-        "description": "A fish-shell package to automatically receive notifications when long processes finish.",
-        "homepage": "",
-        "owner": "franciscolourenco",
-        "repo": "done",
-        "rev": "f6f1998f4b5e89f0783b139a9f86aa2dce147f31",
-        "sha256": "1cw1vlkb29qi2vkbkicb0n7m1siz48867jfs04y4d422j65jpz49",
-        "type": "tarball",
-        "url": "https://github.com/franciscolourenco/done/archive/f6f1998f4b5e89f0783b139a9f86aa2dce147f31.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "fish-plugin-humanize-duration": {
-        "branch": "main",
-        "description": "Make a time interval human readable",
-        "homepage": "",
-        "owner": "fishpkg",
-        "repo": "fish-humanize-duration",
-        "rev": "81cb002a32bf67f17ad73a7dbb23da8cee7b451d",
-        "sha256": "0avlk8hryd9h0cj1a97dcbh38031qf2005bf2f6hi8kmqmxw1apl",
-        "type": "tarball",
-        "url": "https://github.com/fishpkg/fish-humanize-duration/archive/81cb002a32bf67f17ad73a7dbb23da8cee7b451d.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "home-manager": {
         "branch": "master",
         "description": "Manage a user environment using Nix",
@@ -141,18 +105,6 @@
         "sha256": "0cd0w7dyn7dq3j0l8gnzlfy0z4w0p0faspsj1rdxfb202qv9jlsl",
         "type": "tarball",
         "url": "https://github.com/malob/prefmanager/archive/84860e6d4d1ce1dd43118d3968a24245e9ce85e8.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "vim-haskell-module-name": {
-        "branch": "master",
-        "description": "Keep Haskell module declarations and filenames lined up",
-        "homepage": "https://github.com/chkno/vim-haskell-module-name",
-        "owner": "chkno",
-        "repo": "vim-haskell-module-name",
-        "rev": "f9f8e9f83a30b8f805b8fbc0079163e8193b289b",
-        "sha256": "0jawf23gyz9dy6qrh0xhla3z7hgjl1n4g7vmi027j4ipjnlijnji",
-        "type": "tarball",
-        "url": "https://github.com/chkno/vim-haskell-module-name/archive/f9f8e9f83a30b8f805b8fbc0079163e8193b289b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
