@@ -1,5 +1,5 @@
 let
-  sources = import ~/.config/nixpkgs/nix/sources.nix;
+  sources = import ~/dotfiles/nix/nix/sources.nix;
   pkgs    = import sources.nixpkgs-unstable {};
 in
   if pkgs.stdenv.isDarwin then

@@ -1,1 +1,1 @@
-import (import ~/.config/nixpkgs/nix/sources.nix).home-manager
+import (import ~/dotfiles/nix/nix/sources.nix).home-manager

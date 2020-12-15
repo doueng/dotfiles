@@ -3,7 +3,7 @@
 {
   imports = [ ./configuration.nix ];
 
-  environment.darwinConfig = lib.mkForce "$HOME/.config/nixpkgs/darwin/ci.nix";
+  environment.darwinConfig = lib.mkForce "$HOME/dotfiles/nix/darwin/ci.nix";
 
   users.users = lib.mkForce {
     runner.home = "/Users/runner";

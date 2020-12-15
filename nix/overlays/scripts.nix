@@ -13,7 +13,7 @@ let
 
   # Update custom packages
   nix-update-mypkgs = super.writeShellScriptBin "nix-update-mypkgs" ''
-    pushd ~/.config/nixpkgs/pkgs/node-packages
+    pushd ~/dotfiles/nix/pkgs/node-packages
     printf "\n*************************************\n"
     printf "\nUpdating Node package nix expressions\n"
     printf "\n*************************************\n"
@@ -44,12 +44,12 @@ let
   # Update Homebrew pagkages/apps
   brew-bundle-update = super.writeShellScriptBin "brew-bundle-update" ''
     brew update
-    brew bundle --file=~/.config/nixpkgs/Brewfile
+    brew bundle --file=~/dotfiles/nix/Brewfile
   '';
 
   # Remove Homebrew pakages/apps not in Brewfile
   brew-bundle-cleanup = super.writeShellScriptBin "brew-bundle-cleanup" ''
-    brew bundle cleanup --zap --force --file=~/.config/nixpkgs/Brewfile
+    brew bundle cleanup --zap --force --file=~/dotfiles/nix/Brewfile
   '';
 
 in
@@ -68,7 +68,7 @@ in
   '' else ""}
     # Nix
     if [ $1 = 'update' ] || ([ $1 = 'nix' ] && [ $2 = 'update' ]); then
-      pushd ~/.config/nixpkgs
+      pushd ~/dotfiles/nix
       ${self.pkgs.niv}/bin/niv update $3
       popd
     fi

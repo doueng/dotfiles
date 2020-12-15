@@ -55,7 +55,7 @@
 
   # To change location use the following command after updating the option below
   # $ darwin-rebuild switch -I darwin-config=...
-  environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
+  environment.darwinConfig = "$HOME/dotfiles/nix/darwin/configuration.nix";
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;

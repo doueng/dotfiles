@@ -1,1 +1,1 @@
-import (import ~/.config/nixpkgs/nix/sources.nix).nix-darwin
+import (import ~/dotfiles/nix/nix/sources.nix).nix-darwin
