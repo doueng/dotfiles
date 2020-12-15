@@ -1,11 +1,11 @@
-fish_add_path "$HOME/.aw/pex_resources/scripts/binaries"
-fish_add_path /usr/local/bin
-fish_add_path /opt/uber/bin
-fish_add_path "$HOME/bin"
-fish_add_path "$HOME/.cargo/bin"
-fish_add_path "$HOME/.emacs.d/bin"
-fish_add_path "$GO_PATH/bin"
-fish_add_path "$HOME/go/bin"
+#fish_add_path "$HOME/.aw/pex_resources/scripts/binaries"
+#fish_add_path /usr/local/bin
+#fish_add_path /opt/uber/bin
+#fish_add_path "$HOME/bin"
+#fish_add_path "$HOME/.cargo/bin"
+#fish_add_path "$HOME/.emacs.d/bin"
+#fish_add_path "$GO_PATH/bin"
+#fish_add_path "$HOME/go/bin"
 
 set -Ux TOKENIZER /Users/engstrand/tokenizer/payment-forwardservice/
 set -Ux TOKENIZER_CLI $TOKENIZER/cli/target/keymanagement.jar
