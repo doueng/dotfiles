@@ -5,3 +5,4 @@ ln -sf $HOME/dotfiles/nix/overlays/myenvs.nix $HOME/.config/nixpkgs/overlays/mye
 ln -sf $HOME/dotfiles/nix/overlays/mypkgs.nix $HOME/.config/nixpkgs/overlays/mypkgs.nix
 ln -sf $HOME/dotfiles/nix/overlays/neosolarized-colors.nix $HOME/.config/nixpkgs/overlays/neosolarized-colors.nix
 ln -sf $HOME/dotfiles/nix/overlays/scripts.nix $HOME/.config/nixpkgs/overlays/scripts.nix
+ln -sf $HOME/dotfiles/nix/home-manager/fish/functions $HOME/.config/nixpkgs/functions
