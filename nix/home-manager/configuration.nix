@@ -61,6 +61,8 @@
     unrar # extract RAR archives
     wget
     xz # extract XZ archives
+    kill
+    basename
 
     # General dev stuff
     ccls

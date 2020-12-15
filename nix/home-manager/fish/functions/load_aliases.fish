@@ -1,8 +1,8 @@
 function load_aliases
     # paths
-    alias git /usr/local/bin/git
-    alias basename /usr/bin/basename
-    alias kill /bin/kill
+    alias git "$HOME/.nix-profile/bin/git"
+    alias basename  "$HOME/.nix-profile/bin/basename"
+    alias kill "$HOME/.nix-profile/bin/kill"
 
     # Wifi
     alias internet='nmcli con up id Javaplein'
