@@ -81,16 +81,8 @@
 
     # My custom nix related shell scripts
     myenv-script
-
-  ] ++ lib.optionals (mylib.OS == "macOS") [
-    m-cli # useful macOS cli commands
     mypkgs.prefmanager # tool for working with macOS defaults
-  ] ++ lib.optionals (mylib.OS == "Ubuntu") [
-    abduco
-  ]
-  ++ lib.optionals (mylib.OS == "NixOS") [
-    slack
-    vscode
+
   ];
 
   # This value determines the Home Manager release that your configuration is compatible with. This
