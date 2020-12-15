@@ -15,6 +15,7 @@
     "homebrew/cask-versions"
     "homebrew/core"
     "homebrew/services"
+    "d12frosted/emacs-plus"
   ];
 
   programs.brew-bundle.casks = [
@@ -30,5 +31,6 @@
     "transmit"
     "typinator"
     "vlc"
+    "emacs-plus --with-no-titlebar --with-modern-black-variant-icon"
   ];
 }
