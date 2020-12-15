@@ -61,7 +61,7 @@
     unrar # extract RAR archives
     wget
     xz # extract XZ archives
-    kill
+    killall
     basename
 
     # General dev stuff
