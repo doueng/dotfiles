@@ -10,5 +10,5 @@
   programs.fish.enable = true;
 
   # config.fish
-  fish.interactiveShellInit = builtins.readFile "$HOME/fish/config.fish";
+  fish.interactiveShellInit = builtins.readFile "/Users/engstrand/dotfiles/nix/home-manager/fish/config.fish";
 }
