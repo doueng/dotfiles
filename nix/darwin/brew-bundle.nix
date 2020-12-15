@@ -31,8 +31,4 @@
     "typinator"
     "vlc"
   ];
-
-  programs.brew-bundle.masApps = {
-    Xcode = 497799835;
-  };
 }
