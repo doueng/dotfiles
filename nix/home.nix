@@ -5,7 +5,6 @@
   # Import main configuration
   imports = [
     ./home-manager/configuration.nix
-    ./home-manager/linux.nix
   ];
 
   # Options that need to be set when using home-manager directly
