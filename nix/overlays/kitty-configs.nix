@@ -95,15 +95,15 @@ rec {
 
     shell = "/usr/local/bin/fish";
     cursor_shape = "underline";
-    cursor_blink_interval = 0.0;
+    cursor_blink_interval = 0;
     cursor = "#ffffff";
     enable_audio_bell = "no";
     window_alert_on_bell = "no";
     bell_on_tab = "no";
     remember_window_size = "no";
-    background_opacity = 0.9;
+    background_opacity = "0.9";
     mouse_hide_wait = 0;
-    touch_scroll_multiplier = 2.0;
+    touch_scroll_multiplier = 2;
 
   };
 
