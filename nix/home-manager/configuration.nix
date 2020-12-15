@@ -63,7 +63,6 @@
     xz # extract XZ archives
 
     # General dev stuff
-    myenvs.python
     ccls
     jq
     rnix-lsp
