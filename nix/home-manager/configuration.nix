@@ -62,7 +62,6 @@
     wget
     xz # extract XZ archives
     killall
-    basename
 
     # General dev stuff
     ccls
