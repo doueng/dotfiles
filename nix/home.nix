@@ -14,5 +14,5 @@
   # need to set path this way when using niv to manage channels
 
   home.username      = "engstrand";
-  home.homeDirectory = "/home/engstrand";
+  home.homeDirectory = "/Users/engstrand";
 }
