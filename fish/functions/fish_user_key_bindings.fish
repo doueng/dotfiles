@@ -6,3 +6,5 @@ function fish_user_key_bindings
     bind -M insert \cf accept-autosuggestion execute
     bind -M insert \cl /usr/bin/clear commandline -f repaint
 end
+
+fzf_key_bindings
