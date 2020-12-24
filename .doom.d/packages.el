@@ -12,3 +12,4 @@
 (package! anki-editor)
 (package! pdf-tools)
 (package! caps-lock)
+(package! fish-mode)

@@ -1,4 +1,8 @@
 function load_aliases
+    # brew
+    alias brew-arm '/opt/homebrew/bin/brew'
+    alias brew 'arch -x86_64 /usr/local/bin/brew'
+
     # paths
     alias git /usr/local/bin/git
     alias basename /usr/bin/basename

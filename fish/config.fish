@@ -1,8 +1,9 @@
+fish_add_path --append /usr/local/bin
 fish_add_path /opt/homebrew/bin
-fish_add_path /usr/local/bin
 fish_add_path /opt/uber/bin
 fish_add_path "$HOME/.emacs.d/bin"
 fish_add_path "$HOME/bin"
+fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path --append "$HOME/.aw/pex_resources/scripts/binaries"
 
@@ -24,7 +25,7 @@ function change_prompt_cwd --on-variable PWD
 end
 
 printf $HIDE_CURSOR
-function hide_curstor_postexec --on-event fish_postexec
+function hide_cursor_postexec --on-event fish_postexec
     printf $HIDE_CURSOR
 end
 

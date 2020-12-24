@@ -4,7 +4,8 @@ function load_aliases
     alias brew-arm '/opt/homebrew/bin/brew'
 
     # paths
-    alias git /usr/local/bin/git
+    alias git /opt/homebrew/bin/git
+    # alias git /usr/bin/git
     alias basename /usr/bin/basename
     alias kill /bin/kill
 
