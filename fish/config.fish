@@ -15,7 +15,7 @@ set -Ux TERM kitty
 set -Ux UBER_LDAP_UID engstrand
 set -U SHOW_CURSOR "\x1B[?25h"
 set -U HIDE_CURSOR "\x1B[?25l"
-set -U fish_greeting ''
+set -U fish_greeting
 set -U fish_escape_delay_ms 10
 set -U fish_color_valid_path
 
