@@ -5,5 +5,7 @@ function fish_user_key_bindings
     bind -M insert '$' bind_dollar
     bind -M insert \cf accept-autosuggestion execute
     bind -M insert \cl /usr/bin/clear commandline -f repaint
+    bind -M insert \cc hide_cursor_cancel_command
+    bind -M default \cc hide_cursor_cancel_command
     fzf_key_bindings
 end

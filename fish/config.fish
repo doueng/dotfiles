@@ -31,6 +31,11 @@ function hide_cursor_postexec --on-event fish_postexec
     printf $HIDE_CURSOR
 end
 
+function hide_cursor_cancel_command
+    __fish_cancel_commandline
+    printf $HIDE_CURSOR
+end
+
 load_aliases
 
 # Disable all syntax colors
