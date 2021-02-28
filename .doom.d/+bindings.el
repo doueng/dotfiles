@@ -20,15 +20,15 @@
 	:gnvime "s-x" #'counsel-M-x
 	:gnvime "s-[" #'evil-prev-buffer
 	:gnvime "s-]" #'evil-next-buffer
-	:gnvime "s-1" (lambda! (my/switch-tab 1))
-	:gnvime "s-2" (lambda! (my/switch-tab 2))
-	:gnvime "s-3" (lambda! (my/switch-tab 3))
-	:gnvime "s-4" (lambda! (my/switch-tab 4))
-	:gnvime "s-5" (lambda! (my/switch-tab 5))
-	:gnvime "s-6" (lambda! (my/switch-tab 6))
-	:gnvime "s-7" (lambda! (my/switch-tab 7))
-	:gnvime "s-8" (lambda! (my/switch-tab 8))
-	:gnvime "s-9" (lambda! (my/switch-tab 9))
+	:gnvime "s-1" (cmd! (my/switch-tab 1))
+	:gnvime "s-2" (cmd! (my/switch-tab 2))
+	:gnvime "s-3" (cmd! (my/switch-tab 3))
+	:gnvime "s-4" (cmd! (my/switch-tab 4))
+	:gnvime "s-5" (cmd! (my/switch-tab 5))
+	:gnvime "s-6" (cmd! (my/switch-tab 6))
+	:gnvime "s-7" (cmd! (my/switch-tab 7))
+	:gnvime "s-8" (cmd! (my/switch-tab 8))
+	:gnvime "s-9" (cmd! (my/switch-tab 9))
 	:i "s-<backspace>" #'evil-delete-backward-word
-	:gnvime "s-!" (lambda! (universal-argument) (shell-command))
+	:gnvime "s-!" (cmd! (universal-argument) (shell-command))
 	))
