@@ -29,5 +29,6 @@ return {
 	{key="S", mods="CMD|SHIFT", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
 	{key="l", mods="CMD", action=wezterm.action{SendString="ls\n"}},
 	{key="g", mods="CMD", action=wezterm.action{SendString="gs\n"}},
+	{key="h", mods="CMD", action=wezterm.action{SendString="cd\n"}},
   },
 }
